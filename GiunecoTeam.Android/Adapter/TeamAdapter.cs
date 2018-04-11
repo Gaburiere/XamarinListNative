@@ -7,6 +7,7 @@ using Android.Widget;
 using FFImageLoading;
 using FFImageLoading.Views;
 using FFImageLoading.Work;
+using FFImageLoading.Transformations;
 using GiunecoTeam.Domain.Models;
 
 namespace GiunecoTeam.Android.Adapter
@@ -36,6 +37,7 @@ namespace GiunecoTeam.Android.Adapter
                 await ImageService.Instance.LoadCompiledResource("user.png").IntoAsync(viewHolder?.ContactImage);
             else
                 await ImageService.Instance.LoadUrl(_team.ElementAt(position).Images.ImgPic)
+                    .Transform(new CircleTransformation())
                     .ErrorPlaceholder("user.png", ImageSource.CompiledResource)
                     .LoadingPlaceholder("loading.png", ImageSource.CompiledResource)
                     .IntoAsync(viewHolder?.ContactImage);

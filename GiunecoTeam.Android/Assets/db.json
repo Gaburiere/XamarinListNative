@@ -8,7 +8,7 @@
       "bio": "Biografia di Gabriele",
       "email": "gabriele.coppola@giuneco.it",
       "images": {
-        "imgpic": "",
+        "imgpic": "https://www.dropbox.com/s/xlxteaarx4evvci/gcPic.png?raw=1",
         "impgfull": ""
       }
     },
@@ -44,7 +44,19 @@
       "bio": "Biografia di Stefano",
       "email": "stefano.ronchini@giuneco.it",
       "images": {
-        "imgpic": "",
+        "imgpic": "https://www.dropbox.com/s/brapzu2m8obrvoh/srPic.jpg?raw=1",
+        "impgfull": ""
+      }
+    },
+    {
+      "id": 4,
+      "name": "Gabriele",
+      "surname": "Seroni",
+      "role": "Developer",
+      "bio": "Biografia di Stefano",
+      "email": "gabriele.seroni@giuneco.it",
+      "images": {
+        "imgpic": "https://www.dropbox.com/s/9y5dcty49zx7l4c/gsPic.png?raw=1",
         "impgfull": ""
       }
     }
