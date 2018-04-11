@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-  <style name="CustomTheme" parent="android:Theme.Material.Light">
+  <style name="CustomTheme" parent="Theme.AppCompat">
     <item name="android:windowActionBar">false</item>
     <item name="android:windowNoTitle">true</item>
     <item name="android:colorPrimary">@color/giunecoRed</item>

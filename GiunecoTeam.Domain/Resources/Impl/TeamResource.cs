@@ -28,7 +28,8 @@ namespace GiunecoTeam.Domain.Resources.Impl
         public async Task<IEnumerable<TeamMember>> LocalGet(Stream dbStrem)
         {
             var sr = new StreamReader(dbStrem);
-            var dataString = await sr.ReadToEndAsync();
+            //todo capire perché non fa più il read async
+            var dataString = sr.ReadToEnd();
             var data = JObject.Parse(dataString).SelectToken("team").ToString();
             var team = JsonConvert.DeserializeObject<IEnumerable<TeamMember>>(data);
             return team;

@@ -17,22 +17,15 @@ namespace GiunecoTeam.Android.Fragments
         private TeamAdapter _teamAdapter;
         private IEnumerable<TeamMember> _team;
 
-        public override async void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-
-            this._team = await this.GetTeam();
-            this._teamAdapter = new TeamAdapter(this.Activity, this._team);
-
-
-        }
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
             var view = inflater.Inflate(Resource.Layout.TeamFragment, container, false);
 
             this._teamRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.teamRecyclerView);
+
+            this._team = this.GetTeam().ConfigureAwait(false).GetAwaiter().GetResult();
+            this._teamAdapter = new TeamAdapter(this.Activity, this._team);
 
             this._teamRecyclerView.SetAdapter(this._teamAdapter);
             this._layoutManager = new LinearLayoutManager(this.Activity);
