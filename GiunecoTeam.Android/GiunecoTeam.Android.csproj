@@ -115,6 +115,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapter\TeamAdapter.cs" />
+    <Compile Include="Fragments\GroupFragment.cs" />
+    <Compile Include="Fragments\TeamFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
