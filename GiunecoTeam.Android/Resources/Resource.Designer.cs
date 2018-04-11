@@ -2011,8 +2011,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f060034
 			public const int forever = 2131099700;
 			
-			// aapt resource value: 0x7f06007c
-			public const int fullName = 2131099772;
+			// aapt resource value: 0x7f06007d
+			public const int fullName = 2131099773;
 			
 			// aapt resource value: 0x7f060005
 			public const int home = 2131099653;
@@ -2032,8 +2032,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f06003b
 			public const int image = 2131099707;
 			
-			// aapt resource value: 0x7f06007b
-			public const int imagePic = 2131099771;
+			// aapt resource value: 0x7f06007c
+			public const int imagePic = 2131099772;
 			
 			// aapt resource value: 0x7f060075
 			public const int info = 2131099765;
@@ -2059,8 +2059,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f06006e
 			public const int media_actions = 2131099758;
 			
-			// aapt resource value: 0x7f06007d
-			public const int message = 2131099773;
+			// aapt resource value: 0x7f06007e
+			public const int message = 2131099774;
 			
 			// aapt resource value: 0x7f060024
 			public const int middle = 2131099684;
@@ -2191,8 +2191,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f06000c
 			public const int tag_transition_group = 2131099660;
 			
-			// aapt resource value: 0x7f060067
-			public const int teamRecyclerView = 2131099751;
+			// aapt resource value: 0x7f06007b
+			public const int teamRecyclerView = 2131099771;
 			
 			// aapt resource value: 0x7f06000d
 			public const int text = 2131099661;
@@ -2232,6 +2232,9 @@ namespace GiunecoTeam.Android
 			
 			// aapt resource value: 0x7f060019
 			public const int useLogo = 2131099673;
+			
+			// aapt resource value: 0x7f060067
+			public const int viewpager = 2131099751;
 			
 			// aapt resource value: 0x7f06002f
 			public const int withText = 2131099695;
@@ -2419,10 +2422,13 @@ namespace GiunecoTeam.Android
 			public const int support_simple_spinner_dropdown_item = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int TeamItem = 2130903086;
+			public const int TeamFragment = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int tooltip = 2130903087;
+			public const int TeamItem = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int tooltip = 2130903088;
 			
 			static Layout()
 			{
