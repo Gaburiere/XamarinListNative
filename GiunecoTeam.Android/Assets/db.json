@@ -1,0 +1,52 @@
+{
+  "team": [
+    {
+      "id": 1,
+      "name": "Gabriele",
+      "surname": "Coppola",
+      "role": "Developer",
+      "bio": "Biografia di Gabriele",
+      "email": "gabriele.coppola@giuneco.it",
+      "images": {
+        "imgpic": "",
+        "impgfull": ""
+      }
+    },
+    {
+      "id": 2,
+      "name": "Gerardo",
+      "surname": "Greco",
+      "role": "Developer",
+      "bio": "Biografia di Gerardo",
+      "email": "gerardo.greco@giuneco.it",
+      "images": {
+        "imgpic": "https://www.dropbox.com/s/vxkbeq7i5nurcta/ggPic.jpg?raw=1",
+        "impgfull": ""
+      }
+    },
+    {
+      "id": 3,
+      "name": "Marco",
+      "surname": "Milani",
+      "role": "Whipper",
+      "bio": "Biografia di Marco",
+      "email": "marco.milani@giuneco.it",
+      "images": {
+        "imgpic": "",
+        "impgfull": ""
+      }
+    },
+    {
+      "id": 4,
+      "name": "Stefano",
+      "surname": "Ronchini",
+      "role": "Developer",
+      "bio": "Biografia di Stefano",
+      "email": "stefano.ronchini@giuneco.it",
+      "images": {
+        "imgpic": "",
+        "impgfull": ""
+      }
+    }
+  ]
+}
