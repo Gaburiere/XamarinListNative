@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Android.App;
 using Android.Support.V7.Widget;
@@ -31,18 +33,26 @@ namespace GiunecoTeam.Android.Adapter
 
         public override async void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            var viewHolder = holder as TeamMemberViewHolder;
-            
-            if (string.IsNullOrEmpty(_team.ElementAt(position).Images.ImgPic))
-                await ImageService.Instance.LoadCompiledResource("user.png").IntoAsync(viewHolder?.ContactImage);
-            else
-                await ImageService.Instance.LoadUrl(_team.ElementAt(position).Images.ImgPic)
-                    .Transform(new CircleTransformation())
-                    .ErrorPlaceholder("user.png", ImageSource.CompiledResource)
-                    .LoadingPlaceholder("loading.png", ImageSource.CompiledResource)
-                    .IntoAsync(viewHolder?.ContactImage);
+            try
+            {
+                var viewHolder = holder as TeamMemberViewHolder;
 
-            if (viewHolder != null) viewHolder.ContactName.Text = _team.ElementAt(position).Fullname;
+                if (string.IsNullOrEmpty(_team.ElementAt(position).Images.ImgPic))
+                    await ImageService.Instance.LoadCompiledResource("user.png").IntoAsync(viewHolder?.ContactImage);
+                else
+                    await ImageService.Instance.LoadUrl(_team.ElementAt(position).Images.ImgPic)
+                        .Transform(new CircleTransformation())
+                        .ErrorPlaceholder("user.png", ImageSource.CompiledResource)
+                        .LoadingPlaceholder("loading.png", ImageSource.CompiledResource)
+                        .IntoAsync(viewHolder?.ContactImage);
+
+                if (viewHolder != null) viewHolder.ContactName.Text = _team.ElementAt(position).Fullname;
+            }
+            catch (Exception ex)
+            {
+                Debug.Fail(ex.Message);
+            }
+            
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
