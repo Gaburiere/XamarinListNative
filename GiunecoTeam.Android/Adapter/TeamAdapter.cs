@@ -19,6 +19,8 @@ namespace GiunecoTeam.Android.Adapter
         private readonly IEnumerable<TeamMember> _team;
         private readonly Activity _activity;
 
+        public event EventHandler<int> ItemClick;
+
         public TeamAdapter(Activity activity, IEnumerable<TeamMember> team)
         {
             this._activity = activity;
@@ -62,10 +64,14 @@ namespace GiunecoTeam.Android.Adapter
                 Inflate(Resource.Layout.TeamItem, parent, false);
 
             // Create a ViewHolder to hold view references inside the CardView:
-            var viewHolder = new TeamMemberViewHolder(itemView);
+            var viewHolder = new TeamMemberViewHolder(itemView, OnClick);
             return viewHolder;
         }
 
+        void OnClick(int position)
+        {
+            ItemClick?.Invoke(this, position);
+        }
     }
 
     public class TeamMemberViewHolder : RecyclerView.ViewHolder
@@ -73,10 +79,12 @@ namespace GiunecoTeam.Android.Adapter
         public ImageViewAsync ContactImage { get; }      
         public TextView ContactName { get; }
 
-        public TeamMemberViewHolder(View itemView) : base(itemView)
+        public TeamMemberViewHolder(View itemView, Action<int> listener) : base(itemView)
         {
             this.ContactName = itemView.FindViewById<TextView>(Resource.Id.fullName);
             this.ContactImage = itemView.FindViewById<ImageViewAsync>(Resource.Id.imagePic);
+
+            itemView.Click += (sender, e) => listener(base.LayoutPosition);
         }
     }
 }

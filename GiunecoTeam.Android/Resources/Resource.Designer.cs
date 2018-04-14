@@ -3119,7 +3119,10 @@ namespace GiunecoTeam.Android
 			public const int TeamItem = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int tooltip = 2130903103;
+			public const int TeamMemberDetail = 2130903103;
+			
+			// aapt resource value: 0x7f030040
+			public const int tooltip = 2130903104;
 			
 			static Layout()
 			{

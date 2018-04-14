@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Android.Content;
 using Android.OS;
 using Android.Views;
 using Android.Support.V4.App;
@@ -26,6 +27,12 @@ namespace GiunecoTeam.Android.Fragments
 
             this._team = this.GetTeam().ConfigureAwait(false).GetAwaiter().GetResult();
             this._teamAdapter = new TeamAdapter(this.Activity, this._team);
+            this._teamAdapter.ItemClick += (sender, position) =>
+            {
+                //todo modale con dettagli team member
+                var intent = new Intent(this.Activity, typeof(TeamMemberDetail));
+                this.Activity.StartActivity(intent);
+            };
 
             this._teamRecyclerView.SetAdapter(this._teamAdapter);
             this._layoutManager = new LinearLayoutManager(this.Activity);
@@ -42,5 +49,6 @@ namespace GiunecoTeam.Android.Fragments
             var stream = this.Activity.Assets.Open("db.json");
             return await teamResource.LocalGet(stream);
         }
+
     }
 }

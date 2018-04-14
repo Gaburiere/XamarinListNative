@@ -130,6 +130,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeamMemberDetail.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\db.json">
@@ -147,6 +148,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\GroupFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\TeamMemberDetail.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
