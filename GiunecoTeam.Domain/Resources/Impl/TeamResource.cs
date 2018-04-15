@@ -25,14 +25,27 @@ namespace GiunecoTeam.Domain.Resources.Impl
             }
         }
 
-        public async Task<IEnumerable<TeamMember>> LocalGet(Stream dbStrem)
+        public async Task<IEnumerable<TeamMember>> LocalGet(Stream dbStream)
         {
-            var sr = new StreamReader(dbStrem);
+            var sr = new StreamReader(dbStream);
             //todo capire perché non fa più il read async
             var dataString = sr.ReadToEnd();
             var data = JObject.Parse(dataString).SelectToken("team").ToString();
             var team = JsonConvert.DeserializeObject<IEnumerable<TeamMember>>(data);
             return team;
         }
+
+        public async Task<TeamMember> LocalGet(Stream dbStream, int id)
+        {
+            var sr = new StreamReader(dbStream);
+            //todo capire perché non fa più il read async
+            var dataString = sr.ReadToEnd();
+            var data = JObject.Parse(dataString).SelectToken("team").ToString();
+            var team = JsonConvert.DeserializeObject<IEnumerable<TeamMember>>(data);
+            var teamMember = team.Single(member => member.Id == id);
+            return teamMember;
+        }
+
+
     }
 }

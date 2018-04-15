@@ -9,5 +9,6 @@ namespace GiunecoTeam.Domain.Resources
     {
         Task<IEnumerable<TeamMember>> Get();
         Task<IEnumerable<TeamMember>> LocalGet(Stream dbStrem);
+        Task<TeamMember> LocalGet(Stream dbStream, int id);
     }
 }

@@ -2432,6 +2432,9 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f07002f
 			public const int beginning = 2131165231;
 			
+			// aapt resource value: 0x7f0700b5
+			public const int bio = 2131165365;
+			
 			// aapt resource value: 0x7f070057
 			public const int blocking = 2131165271;
 			
@@ -2510,6 +2513,9 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f07007e
 			public const int edit_query = 2131165310;
 			
+			// aapt resource value: 0x7f0700b4
+			public const int email = 2131165364;
+			
 			// aapt resource value: 0x7f070030
 			public const int end = 2131165232;
 			
@@ -2570,6 +2576,9 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f07005f
 			public const int image = 2131165279;
 			
+			// aapt resource value: 0x7f0700b1
+			public const int imageFull = 2131165361;
+			
 			// aapt resource value: 0x7f0700af
 			public const int imagePic = 2131165359;
 			
@@ -2600,14 +2609,14 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f070061
 			public const int list_item = 2131165281;
 			
-			// aapt resource value: 0x7f0700b3
-			public const int masked = 2131165363;
+			// aapt resource value: 0x7f0700b8
+			public const int masked = 2131165368;
 			
 			// aapt resource value: 0x7f0700a1
 			public const int media_actions = 2131165345;
 			
-			// aapt resource value: 0x7f0700b1
-			public const int message = 2131165361;
+			// aapt resource value: 0x7f0700b6
+			public const int message = 2131165366;
 			
 			// aapt resource value: 0x7f070031
 			public const int middle = 2131165233;
@@ -2617,6 +2626,9 @@ namespace GiunecoTeam.Android
 			
 			// aapt resource value: 0x7f070028
 			public const int multiply = 2131165224;
+			
+			// aapt resource value: 0x7f0700b2
+			public const int name = 2131165362;
 			
 			// aapt resource value: 0x7f070093
 			public const int navigation_header_container = 2131165331;
@@ -2668,6 +2680,9 @@ namespace GiunecoTeam.Android
 			
 			// aapt resource value: 0x7f0700a5
 			public const int right_side = 2131165349;
+			
+			// aapt resource value: 0x7f0700b3
+			public const int role = 2131165363;
 			
 			// aapt resource value: 0x7f07000c
 			public const int save_image_matrix = 2131165196;
@@ -2864,8 +2879,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f07009a
 			public const int viewpager = 2131165338;
 			
-			// aapt resource value: 0x7f0700b2
-			public const int visible = 2131165362;
+			// aapt resource value: 0x7f0700b7
+			public const int visible = 2131165367;
 			
 			// aapt resource value: 0x7f07003c
 			public const int withText = 2131165244;

@@ -29,8 +29,8 @@ namespace GiunecoTeam.Android.Fragments
             this._teamAdapter = new TeamAdapter(this.Activity, this._team);
             this._teamAdapter.ItemClick += (sender, position) =>
             {
-                //todo modale con dettagli team member
                 var intent = new Intent(this.Activity, typeof(TeamMemberDetail));
+                intent.PutExtra("id", position + 1);
                 this.Activity.StartActivity(intent);
             };
 
