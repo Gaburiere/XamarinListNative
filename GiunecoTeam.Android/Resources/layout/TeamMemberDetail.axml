@@ -36,6 +36,14 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
     />
+
+      <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+        />
+
       <RelativeLayout
         android:id="@+id/sendEmailSection"
         android:layout_width="match_parent"
@@ -63,6 +71,26 @@
           />
 
       </RelativeLayout>
+
+      <View
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="5dp"
+      />
+
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aforismi"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
 
       <TextView
         android:id="@+id/bio"

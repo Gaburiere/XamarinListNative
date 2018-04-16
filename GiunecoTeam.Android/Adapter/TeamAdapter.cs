@@ -26,6 +26,7 @@ namespace GiunecoTeam.Android.Adapter
             this._activity = activity;
             this._team = team;
         }
+
         public override int ItemCount => this._team.Count();
 
         public override long GetItemId(int position)
@@ -59,16 +60,14 @@ namespace GiunecoTeam.Android.Adapter
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            // Inflate the CardView for the photo:
             var itemView = LayoutInflater.From(parent.Context).
                 Inflate(Resource.Layout.TeamItem, parent, false);
 
-            // Create a ViewHolder to hold view references inside the CardView:
             var viewHolder = new TeamMemberViewHolder(itemView, OnClick);
             return viewHolder;
         }
 
-        void OnClick(int position)
+        private void OnClick(int position)
         {
             ItemClick?.Invoke(this, position);
         }
