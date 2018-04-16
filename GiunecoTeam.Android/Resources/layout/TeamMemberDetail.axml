@@ -24,6 +24,7 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
       />
       <TextView
         android:id="@+id/role"
@@ -33,16 +34,36 @@
         android:textColor="@color/white"
         android:textSize="25sp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
     />
-      <TextView
-        android:id="@+id/email"
+      <RelativeLayout
+        android:id="@+id/sendEmailSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="email"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:layout_marginLeft="5dp"
-    />
+        android:layout_marginTop="5dp"
+        >
+
+        <TextView
+          android:id="@+id/email"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="email"
+          android:textColor="@color/white"
+          android:textSize="20sp"
+          android:layout_marginLeft="5dp"
+          android:layout_alignParentLeft="true"/>
+
+        <ImageView
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:layout_alignParentRight="true"
+          android:src="@drawable/emailIcon"
+          android:scaleType="fitCenter"
+          android:layout_marginRight="5dp"
+          />
+
+      </RelativeLayout>
+
       <TextView
         android:id="@+id/bio"
         android:layout_width="match_parent"
@@ -51,6 +72,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
     />
     </LinearLayout>
   </ScrollView>

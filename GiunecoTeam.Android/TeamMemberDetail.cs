@@ -1,14 +1,14 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
 using FFImageLoading;
-using FFImageLoading.Transformations;
 using FFImageLoading.Views;
 using FFImageLoading.Work;
 using GiunecoTeam.Domain.Resources;
 using GiunecoTeam.Domain.Resources.Impl;
-using Java.Lang;
+using Exception = Java.Lang.Exception;
 
 namespace GiunecoTeam.Android
 {
@@ -20,6 +20,7 @@ namespace GiunecoTeam.Android
         private TextView _email;
         private TextView _bio;
         private ImageViewAsync _image;
+        private RelativeLayout _sendMailSection;
 
         private int _id;
 
@@ -37,6 +38,26 @@ namespace GiunecoTeam.Android
             this._email = this.FindViewById<TextView>(Resource.Id.email);
             this._bio = this.FindViewById<TextView>(Resource.Id.bio);
             this._image = this.FindViewById<ImageViewAsync>(Resource.Id.imageFull);
+            this._sendMailSection = this.FindViewById<RelativeLayout>(Resource.Id.sendEmailSection);
+
+            this._sendMailSection.Click += (sender, e) =>
+            {
+                try
+                {
+                    var emailIntent = new Intent(Intent.ActionSend);
+                    emailIntent.PutExtra(Intent.ExtraEmail, new string[] {this._email.Text});
+                    emailIntent.PutExtra(Intent.ExtraSubject, "Giuneco Team email sample");
+                    emailIntent.PutExtra(Intent.ExtraText,
+                        $"Carissimo {this._name.Text}, questa è una email di test per l'evento di formazione.");
+                    this.StartActivity(Intent.CreateChooser(emailIntent,
+                        "Invia email con: "));
+                }
+                catch (Exception ex)
+                {
+                   System.Diagnostics.Debug.Fail(ex.Message);
+                }
+            };
+
 
             this._id = Intent.GetIntExtra("id", -1);
             if(this._id == -1)

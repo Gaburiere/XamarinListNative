@@ -26,6 +26,7 @@ namespace GiunecoTeam.Android.Fragments
             this._teamRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.teamRecyclerView);
 
             this._team = this.GetTeam().ConfigureAwait(false).GetAwaiter().GetResult();
+            this._team = this.GetTeam().ConfigureAwait(false).GetAwaiter().GetResult();
             this._teamAdapter = new TeamAdapter(this.Activity, this._team);
             this._teamAdapter.ItemClick += (sender, position) =>
             {
