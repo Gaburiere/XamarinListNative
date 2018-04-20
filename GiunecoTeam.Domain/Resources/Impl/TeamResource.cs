@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Reflection;
 using System.Threading.Tasks;
 using GiunecoTeam.Domain.Models;
 using Newtonsoft.Json;
@@ -25,13 +23,27 @@ namespace GiunecoTeam.Domain.Resources.Impl
             }
         }
 
-        public async Task<IEnumerable<TeamMember>> LocalGet(Stream dbStrem)
+        public async Task<IEnumerable<TeamMember>> LocalGet(Stream dbStream)
         {
-            var sr = new StreamReader(dbStrem);
-            var dataString = await sr.ReadToEndAsync();
+            var sr = new StreamReader(dbStream);
+            //todo capire perché non fa più il read async
+            var dataString = sr.ReadToEnd();
             var data = JObject.Parse(dataString).SelectToken("team").ToString();
             var team = JsonConvert.DeserializeObject<IEnumerable<TeamMember>>(data);
             return team;
         }
+
+        public async Task<TeamMember> LocalGet(Stream dbStream, int id)
+        {
+            var sr = new StreamReader(dbStream);
+            //todo capire perché non fa più il read async
+            var dataString = sr.ReadToEnd();
+            var data = JObject.Parse(dataString).SelectToken("team").ToString();
+            var team = JsonConvert.DeserializeObject<IEnumerable<TeamMember>>(data);
+            var teamMember = team.Single(member => member.Id == id);
+            return teamMember;
+        }
+
+
     }
 }

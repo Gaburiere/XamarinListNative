@@ -1,45 +1,49 @@
 ﻿using Android.App;
 using Android.OS;
-using GiunecoTeam.Domain.Models;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Android.Support.V7.Widget;
+using Android.Support.Design.Widget;
+using Android.Support.V4.View;
+using Android.Support.V7.App;
 using GiunecoTeam.Android.Adapter;
-using GiunecoTeam.Domain.Resources.Impl;
+using GiunecoTeam.Android.Fragments;
 
 namespace GiunecoTeam.Android
 {
-    [Activity(Label = "Giuneco Team", MainLauncher = true, Theme = "@style/CustomTheme")]
-    public class MainActivity : Activity
+    [Activity(Label = "Giuneco Team", MainLauncher = true, Theme = "@style/SplashTheme")]
+    public class MainActivity : AppCompatActivity
     {
-        private RecyclerView _teamRecyclerView;
-        private RecyclerView.LayoutManager _layoutManager;
-        private TeamAdapter _teamAdapter;
-        private IEnumerable<TeamMember> _team;
+        private ViewPager _viewPager;
+        private TabLayout _tabLayout;
 
-        protected override async void OnCreate(Bundle savedInstanceState)
+        private ViewPagerAdapter _viewPagerAdapter;
+
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            this._team = await this.GetTeam();
-            this._teamAdapter = new TeamAdapter(this, this._team);
-
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            this._teamRecyclerView = FindViewById<RecyclerView>(Resource.Id.teamRecyclerView);
+            // get the viewPager and tabLayout
+            this._viewPager = FindViewById<ViewPager>(Resource.Id.viewpager);
+            this._tabLayout = FindViewById<TabLayout>(Resource.Id.tabLayout);
 
-            this._teamRecyclerView.SetAdapter(this._teamAdapter);
-            this._layoutManager = new LinearLayoutManager(this);
-            this._teamRecyclerView.SetLayoutManager(_layoutManager);
+            // init adapter
+            this._viewPagerAdapter = new ViewPagerAdapter(this.SupportFragmentManager);
+            // add fragments in the adapter
+            this.PopulateFragment();
+
+            // set adapter in viewPager
+            this._viewPager.Adapter = this._viewPagerAdapter;
+
+            this._tabLayout.SetupWithViewPager(this._viewPager);
         }
 
-        private async Task<IEnumerable<TeamMember>> GetTeam()
+        private void PopulateFragment()
         {
-            var teamResource = new TeamResource();
+            var groupFragment = new GroupFragment();
+            var teamFragment = new TeamFragment();
 
-            var stream = Assets.Open("db.json");
-            return await teamResource.LocalGet(stream);
+            this._viewPagerAdapter.AddFragmentWithTitle(teamFragment, "Team");
+            this._viewPagerAdapter.AddFragmentWithTitle(groupFragment, "Groups");
+
         }
     }
 }
