@@ -65,12 +65,77 @@
       "name": "Andrea",
       "surname": "Lorenzi",
       "role": "Financial Controller",
-      "bio": "Durante la fatturazione, o solo attiva o niente. Un po' come il kebab, con tutto o niente!",
+      "bio": "La fatturazione è solo attiva o niente. Un po' come il kebab, con tutto o niente!",
       "email": "andrea.lorenzi@giuneco.it",
       "images": {
         "imgpic": "https://www.dropbox.com/s/3uyfm703da4o7qa/alPic.png?raw=1",
         "imgfull": ""
       }
+    },
+    {
+      "id": 7,
+      "name": "Federico",
+      "surname": "Barsotti",
+      "role": "Chief Technical Officier",
+      "bio": "",
+      "email": "federico.barsotti@giuneco.it",
+      "images": {
+        "imgpic": "",
+        "imgfull": ""
+      }
     }
-  ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "La Marzocco",
+      "image": "", 
+      "address": "",
+      "groupmembers": [
+        {
+          "teammemberid": 1
+        },
+        {
+          "teammemberid": 7
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PowerSoft",
+      "image": "",
+      "address": "",
+      "groupmembers": [
+        {
+          "teammemberid": 1
+        },
+        {
+          "teammemberid": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Luisa Via Roma",
+      "image": "",
+      "address": "",
+      "groupmembers": [
+        {
+          "teammemberid": 1
+        },
+        {
+          "teammemberid": 2
+        },
+        {
+          "teammemberid": 4
+        },
+        {
+          "teammemberid": 5
+        },
+        {
+          "teammemberid": 6
+        }
+      ]
+    }
+  ] 
 }

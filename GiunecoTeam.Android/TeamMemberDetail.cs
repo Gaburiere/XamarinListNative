@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
@@ -8,7 +9,6 @@ using FFImageLoading.Views;
 using FFImageLoading.Work;
 using GiunecoTeam.Domain.Resources;
 using GiunecoTeam.Domain.Resources.Impl;
-using Exception = Java.Lang.Exception;
 
 namespace GiunecoTeam.Android
 {
@@ -76,7 +76,7 @@ namespace GiunecoTeam.Android
 
                 this._name.Text = member.Fullname;
                 this._role.Text = member.Role;
-                this._email.Text = member.Email;
+                this._email.Text = $"Clicca qui per scrivere a {member.Name}";
                 this._bio.Text = member.Bio;
 
                 if (string.IsNullOrEmpty(member.Images.ImgFull))
