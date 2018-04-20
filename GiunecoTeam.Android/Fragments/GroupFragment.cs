@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Android.Content;
+using Android.Net;
 using Android.OS;
 using Android.Views;
 using Android.Support.V4.App;
@@ -25,12 +28,21 @@ namespace GiunecoTeam.Android.Fragments
             this._groupsRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.groupsRecyclerView);
 
             this._groups = this.GetGroups().GetAwaiter().GetResult();
-            this._groupsAdapter = new GroupsAdapter(this._groups);
-            this._groupsAdapter.ItemClick += (sender, e) =>
+            this._groupsAdapter = new GroupsAdapter(this._groups, this.Activity);
+            this._groupsAdapter.ItemClick += (sender, position) =>
             {
-                // todo
+                var groupAddress = this._groups.ElementAt(position).Address;
+                var groupName = this._groups.ElementAt(position).Name;
+
+                var geoUri = Uri.Parse($"geo:0,0?q={groupName}+{groupAddress}");
+
+
+                var mapIntent = new Intent(Intent.ActionView, geoUri);
+                this.StartActivity(Intent.CreateChooser(mapIntent,
+                    "Apri indirizzo con: "));
             };
 
+            //Groups
             this._groupsRecyclerView.SetAdapter(this._groupsAdapter);
             this._layoutManager = new LinearLayoutManager(this.Activity);
             this._groupsRecyclerView.SetLayoutManager(_layoutManager);

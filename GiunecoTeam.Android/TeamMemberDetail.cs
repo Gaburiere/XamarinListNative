@@ -9,6 +9,7 @@ using FFImageLoading.Views;
 using FFImageLoading.Work;
 using GiunecoTeam.Domain.Resources;
 using GiunecoTeam.Domain.Resources.Impl;
+using Uri = Android.Net.Uri;
 
 namespace GiunecoTeam.Android
 {
@@ -44,11 +45,7 @@ namespace GiunecoTeam.Android
             {
                 try
                 {
-                    var emailIntent = new Intent(Intent.ActionSend);
-                    emailIntent.PutExtra(Intent.ExtraEmail, new string[] {this._email.Text});
-                    emailIntent.PutExtra(Intent.ExtraSubject, "Giuneco Team email sample");
-                    emailIntent.PutExtra(Intent.ExtraText,
-                        $"Carissimo {this._name.Text}, questa è una email di test per l'evento di formazione.");
+                    Intent emailIntent = ComposeEmail();
                     this.StartActivity(Intent.CreateChooser(emailIntent,
                         "Invia email con: "));
                 }
@@ -66,6 +63,17 @@ namespace GiunecoTeam.Android
             this.SetTeamMember(_id);
         }
 
+        private Intent ComposeEmail()
+        {
+            var emailIntent = new Intent(Intent.ActionSendto);
+            emailIntent.SetData(Uri.Parse("mailto:"));
+            emailIntent.PutExtra(Intent.ExtraEmail, new string[] { this._email.Text });
+            emailIntent.PutExtra(Intent.ExtraSubject, "Giuneco Team email sample");
+            emailIntent.PutExtra(Intent.ExtraText,
+                $"Carissimo {this._name.Text}, questa è una email di test per l'evento di formazione.");
+            return emailIntent;
+        }
+
         private async void SetTeamMember(int id)
         {
             try
@@ -76,7 +84,7 @@ namespace GiunecoTeam.Android
 
                 this._name.Text = member.Fullname;
                 this._role.Text = member.Role;
-                this._email.Text = $"Clicca qui per scrivere a {member.Name}";
+                this._email.Text = $"{member.Email}";
                 this._bio.Text = member.Bio;
 
                 if (string.IsNullOrEmpty(member.Images.ImgFull))
