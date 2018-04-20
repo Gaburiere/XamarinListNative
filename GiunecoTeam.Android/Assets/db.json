@@ -17,7 +17,7 @@
       "name": "Gerardo",
       "surname": "Greco",
       "role": "Developer",
-      "bio": "Cazzo si! mi sono spezzato le gambe di squat!",
+      "bio": "Ho scaricato BloodBorne! Ce l'ho li pronto per essere giocato...",
       "email": "gerardo.greco@giuneco.it",
       "images": {
         "imgpic": "https://www.dropbox.com/s/vxkbeq7i5nurcta/ggPic.jpg?raw=1",
@@ -29,7 +29,7 @@
       "name": "Marco",
       "surname": "Milani",
       "role": "Whipper",
-      "bio": "Ti raserò l'aiolaaaaaaa, cristo!",
+      "bio": "Ti rasero' l'aiolaaaaaaa, cristo!",
       "email": "marco.milani@giuneco.it",
       "images": {
         "imgpic": "https://www.dropbox.com/s/n4a9925efgyrnac/marmPic.jpg?raw=1",
@@ -53,7 +53,7 @@
       "name": "Gabriele",
       "surname": "Seroni",
       "role": "Developer",
-      "bio": "oddio un virus! sappi che sono da mac e non funzionano queste cose con me ahahahah",
+      "bio": "I'Ssero risolve!",
       "email": "gabriele.seroni@giuneco.it",
       "images": {
         "imgpic": "https://www.dropbox.com/s/9y5dcty49zx7l4c/gsPic.png?raw=1",
@@ -65,7 +65,7 @@
       "name": "Andrea",
       "surname": "Lorenzi",
       "role": "Financial Controller",
-      "bio": "La fatturazione è solo attiva o niente. Un po' come il kebab, con tutto o niente!",
+      "bio": "La fatturazione e' solo attiva o niente. Un po' come il kebab, con tutto o niente!",
       "email": "andrea.lorenzi@giuneco.it",
       "images": {
         "imgpic": "https://www.dropbox.com/s/3uyfm703da4o7qa/alPic.png?raw=1",
@@ -89,51 +89,120 @@
     {
       "id": 1,
       "name": "La Marzocco",
-      "image": "", 
-      "address": "",
+      "groupimage": "http://www.easyfairs.com/uploads/tx_ef/lamarzocco-official-logo.png",
+      "address": "Località la Torre, 14H, 50038 Scarperia FI",
       "groupmembers": [
         {
-          "teammemberid": 1
+          "id": 1,
+          "name": "Gabriele",
+          "surname": "Coppola",
+          "role": "Developer",
+          "bio": "Cane bastardo spregevole",
+          "email": "gabriele.coppola@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/xlxteaarx4evvci/gcPic.png?raw=1",
+            "imgfull": "https://www.dropbox.com/s/s0bo29djv73bp1h/gcFull.png?raw=1"
+          }
         },
         {
-          "teammemberid": 7
+          "id": 7,
+          "name": "Federico",
+          "surname": "Barsotti",
+          "role": "Chief Technical Officier",
+          "bio": "",
+          "email": "federico.barsotti@giuneco.it",
+          "images": {
+            "imgpic": "",
+            "imgfull": ""
+          }
         }
       ]
     },
     {
       "id": 2,
       "name": "PowerSoft",
-      "image": "",
-      "address": "",
+      "groupimage": "http://surgesound.co.za/wp-content/uploads/2014/06/Powersoft_logo_blue.png",
+      "address": "Via Conti, 5, 50018 Scandicci FI",
       "groupmembers": [
         {
-          "teammemberid": 1
+          "id": 1,
+          "name": "Gabriele",
+          "surname": "Coppola",
+          "role": "Developer",
+          "bio": "Cane bastardo spregevole",
+          "email": "gabriele.coppola@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/xlxteaarx4evvci/gcPic.png?raw=1",
+            "imgfull": "https://www.dropbox.com/s/s0bo29djv73bp1h/gcFull.png?raw=1"
+          }
         },
         {
-          "teammemberid": 3
+          "id": 3,
+          "name": "Marco",
+          "surname": "Milani",
+          "role": "Whipper",
+          "bio": "Ti rasero' l'aiolaaaaaaa, cristo!",
+          "email": "marco.milani@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/n4a9925efgyrnac/marmPic.jpg?raw=1",
+            "imgfull": ""
+          }
         }
       ]
     },
     {
       "id": 2,
       "name": "Luisa Via Roma",
-      "image": "",
-      "address": "",
+      "groupimage": "http://fashionstealer.com/PICTURES/stores/luisaviaroma_logo.png",
+      "address": "Via Silvio Pellico, 9, 50121 Firenze FI",
       "groupmembers": [
         {
-          "teammemberid": 1
+          "id": 2,
+          "name": "Gerardo",
+          "surname": "Greco",
+          "role": "Developer",
+          "bio": "Ho scaricato BloodBorne! Ce l'ho li pronto per essere giocato...",
+          "email": "gerardo.greco@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/vxkbeq7i5nurcta/ggPic.jpg?raw=1",
+            "imgfull": ""
+          }
         },
         {
-          "teammemberid": 2
+          "id": 4,
+          "name": "Stefano",
+          "surname": "Ronchini",
+          "role": "Developer",
+          "bio": "Godo come un bastardo!",
+          "email": "stefano.ronchini@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/brapzu2m8obrvoh/srPic.jpg?raw=1",
+            "imgfull": ""
+          }
         },
         {
-          "teammemberid": 4
+          "id": 5,
+          "name": "Gabriele",
+          "surname": "Seroni",
+          "role": "Developer",
+          "bio": "I'Ssero risolve!",
+          "email": "gabriele.seroni@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/9y5dcty49zx7l4c/gsPic.png?raw=1",
+            "imgfull": ""
+          }
         },
         {
-          "teammemberid": 5
-        },
-        {
-          "teammemberid": 6
+          "id": 6,
+          "name": "Andrea",
+          "surname": "Lorenzi",
+          "role": "Financial Controller",
+          "bio": "Figa! Quanti giargiani!",
+          "email": "andrea.lorenzi@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/3uyfm703da4o7qa/alPic.png?raw=1",
+            "imgfull": ""
+          }
         }
       ]
     }

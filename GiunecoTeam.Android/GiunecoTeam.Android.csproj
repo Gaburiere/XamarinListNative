@@ -123,6 +123,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\GroupMembersAdapter.cs" />
+    <Compile Include="Adapter\GroupsAdapter.cs" />
     <Compile Include="Adapter\TeamAdapter.cs" />
     <Compile Include="Adapter\ViewPagerAdapter.cs" />
     <Compile Include="Fragments\GroupFragment.cs" />
@@ -151,6 +153,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\TeamMemberDetail.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\GroupItem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\GroupMemberItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

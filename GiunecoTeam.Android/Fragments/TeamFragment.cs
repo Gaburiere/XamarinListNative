@@ -39,7 +39,6 @@ namespace GiunecoTeam.Android.Fragments
             this._teamRecyclerView.SetLayoutManager(_layoutManager);
 
             return view;
-
         }
 
         private async Task<IEnumerable<TeamMember>> GetTeam()

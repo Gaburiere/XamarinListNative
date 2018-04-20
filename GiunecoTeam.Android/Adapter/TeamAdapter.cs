@@ -39,6 +39,7 @@ namespace GiunecoTeam.Android.Adapter
             try
             {
                 var viewHolder = holder as TeamMemberViewHolder;
+                if (viewHolder != null) viewHolder.ContactName.Text = _team.ElementAt(position).Fullname;
 
                 if (string.IsNullOrEmpty(_team.ElementAt(position).Images.ImgPic))
                     await ImageService.Instance.LoadCompiledResource("user.png").IntoAsync(viewHolder?.ContactImage);
@@ -48,8 +49,6 @@ namespace GiunecoTeam.Android.Adapter
                         .ErrorPlaceholder("user.png", ImageSource.CompiledResource)
                         .LoadingPlaceholder("loading.png", ImageSource.CompiledResource)
                         .IntoAsync(viewHolder?.ContactImage);
-
-                if (viewHolder != null) viewHolder.ContactName.Text = _team.ElementAt(position).Fullname;
             }
             catch (Exception ex)
             {
