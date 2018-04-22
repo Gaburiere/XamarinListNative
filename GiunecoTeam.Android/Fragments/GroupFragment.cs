@@ -27,7 +27,8 @@ namespace GiunecoTeam.Android.Fragments
 
             this._groupsRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.groupsRecyclerView);
 
-            this._groups = this.GetGroups().GetAwaiter().GetResult();
+            this.GetGroups().ContinueWith(c => this._groups = c.Result);
+
             this._groupsAdapter = new GroupsAdapter(this._groups, this.Activity);
             this._groupsAdapter.ItemClick += (sender, position) =>
             {
