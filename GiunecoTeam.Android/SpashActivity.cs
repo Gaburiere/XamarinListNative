@@ -17,7 +17,7 @@ namespace GiunecoTeam.Android
         private Button _btn;
 
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Splash);
@@ -32,8 +32,6 @@ namespace GiunecoTeam.Android
                 _logoLauncher.StartAnimation(_scaleDownAnimation);
             };
 
-            ImageService.Instance.LoadCompiledResource("launcher.png").Into(_logoLauncher);
-
             this._scaleDownAnimation = new ScaleAnimation
             (
                 1f, 1.5f, 1f, 1.5f, Dimension.RelativeToSelf, 0.5f, Dimension.RelativeToSelf, 0.5f
@@ -43,17 +41,24 @@ namespace GiunecoTeam.Android
                 Duration = 500
             };
 
-            //Animate();
+            await ImageService.Instance.LoadCompiledResource("launcher.png")
+                .Success(async () => await this.Animate())
+                .IntoAsync(_logoLauncher);
+
 
             //RunOnUiThread(() => StartActivity(typeof(MainActivity)));
         }
 
-        private void Animate()
+        private async Task Animate()
         {
-            _logoLauncher.StartAnimation(_scaleDownAnimation);
-            System.Threading.Thread.Sleep(10000); // Simulate a long loading process on app      
+            while (true)
+            {
+                _logoLauncher.StartAnimation(_scaleDownAnimation);
+                await Task.Delay(350);
+                _logoLauncher.StartAnimation(_scaleDownAnimation);
+                await Task.Delay(650);
 
-
+            }
         }
     }
 }
