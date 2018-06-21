@@ -29,7 +29,7 @@ namespace GiunecoTeam.Android.Fragments
             this._teamAdapter = new TeamAdapter(this.Activity, this._team);
             this._teamAdapter.ItemClick += (sender, position) =>
             {
-                var intent = new Intent(this.Activity, typeof(TeamMemberDetail));
+                var intent = new Intent(this.Activity, typeof(TeamMemberDetailActivity));
                 intent.PutExtra("id", position + 1);
                 this.Activity.StartActivity(intent);
             };

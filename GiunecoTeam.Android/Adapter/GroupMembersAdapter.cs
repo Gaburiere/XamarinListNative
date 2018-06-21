@@ -28,7 +28,7 @@ namespace GiunecoTeam.Android.Adapter
             this.ItemClick += (sender, position) =>
             {
                 var item = this._groupMembers.ElementAt(position);
-                var intent = new Intent(this._context, typeof(TeamMemberDetail));
+                var intent = new Intent(this._context, typeof(TeamMemberDetailActivity));
                 intent.PutExtra("id", item.Id);
                 this._context.StartActivity(intent);
             };

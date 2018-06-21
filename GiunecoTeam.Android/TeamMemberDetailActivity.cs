@@ -14,7 +14,7 @@ using Uri = Android.Net.Uri;
 namespace GiunecoTeam.Android
 {
     [Activity(Theme = "@style/SplashTheme")]
-    public class TeamMemberDetail: AppCompatActivity
+    public class TeamMemberDetailActivity: AppCompatActivity
     {
         private TextView _name;
         private TextView _role;
