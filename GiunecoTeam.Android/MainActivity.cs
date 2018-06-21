@@ -8,7 +8,7 @@ using GiunecoTeam.Android.Fragments;
 
 namespace GiunecoTeam.Android
 {
-    [Activity(Theme = "@style/MainTheme")]
+    [Activity(Theme = "@style/CustomTheme")]
     public class MainActivity : AppCompatActivity
     {
         private ViewPager _viewPager;

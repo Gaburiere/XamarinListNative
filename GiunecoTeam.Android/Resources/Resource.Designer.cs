@@ -2435,14 +2435,17 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f07002f
 			public const int beginning = 2131165231;
 			
-			// aapt resource value: 0x7f0700ba
-			public const int bio = 2131165370;
+			// aapt resource value: 0x7f0700bc
+			public const int bio = 2131165372;
 			
 			// aapt resource value: 0x7f070057
 			public const int blocking = 2131165271;
 			
 			// aapt resource value: 0x7f07003d
 			public const int bottom = 2131165245;
+			
+			// aapt resource value: 0x7f0700b3
+			public const int btn = 2131165363;
 			
 			// aapt resource value: 0x7f070063
 			public const int buttonPanel = 2131165283;
@@ -2516,8 +2519,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f07007e
 			public const int edit_query = 2131165310;
 			
-			// aapt resource value: 0x7f0700b9
-			public const int email = 2131165369;
+			// aapt resource value: 0x7f0700bb
+			public const int email = 2131165371;
 			
 			// aapt resource value: 0x7f070030
 			public const int end = 2131165232;
@@ -2555,8 +2558,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f070058
 			public const int forever = 2131165272;
 			
-			// aapt resource value: 0x7f0700b4
-			public const int fullName = 2131165364;
+			// aapt resource value: 0x7f0700b6
+			public const int fullName = 2131165366;
 			
 			// aapt resource value: 0x7f07000a
 			public const int ghost_view = 2131165194;
@@ -2591,11 +2594,11 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f07005f
 			public const int image = 2131165279;
 			
-			// aapt resource value: 0x7f0700b5
-			public const int imageFull = 2131165365;
+			// aapt resource value: 0x7f0700b7
+			public const int imageFull = 2131165367;
 			
-			// aapt resource value: 0x7f0700b3
-			public const int imagePic = 2131165363;
+			// aapt resource value: 0x7f0700b5
+			public const int imagePic = 2131165365;
 			
 			// aapt resource value: 0x7f0700ac
 			public const int info = 2131165356;
@@ -2624,14 +2627,17 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f070061
 			public const int list_item = 2131165281;
 			
-			// aapt resource value: 0x7f0700bd
-			public const int masked = 2131165373;
+			// aapt resource value: 0x7f0700b2
+			public const int logoLauncher = 2131165362;
+			
+			// aapt resource value: 0x7f0700bf
+			public const int masked = 2131165375;
 			
 			// aapt resource value: 0x7f0700a5
 			public const int media_actions = 2131165349;
 			
-			// aapt resource value: 0x7f0700bb
-			public const int message = 2131165371;
+			// aapt resource value: 0x7f0700bd
+			public const int message = 2131165373;
 			
 			// aapt resource value: 0x7f070031
 			public const int middle = 2131165233;
@@ -2642,8 +2648,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f070028
 			public const int multiply = 2131165224;
 			
-			// aapt resource value: 0x7f0700b6
-			public const int name = 2131165366;
+			// aapt resource value: 0x7f0700b8
+			public const int name = 2131165368;
 			
 			// aapt resource value: 0x7f070093
 			public const int navigation_header_container = 2131165331;
@@ -2696,8 +2702,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f0700a9
 			public const int right_side = 2131165353;
 			
-			// aapt resource value: 0x7f0700b7
-			public const int role = 2131165367;
+			// aapt resource value: 0x7f0700b9
+			public const int role = 2131165369;
 			
 			// aapt resource value: 0x7f07000c
 			public const int save_image_matrix = 2131165196;
@@ -2759,8 +2765,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f07008a
 			public const int select_dialog_listview = 2131165322;
 			
-			// aapt resource value: 0x7f0700b8
-			public const int sendEmailSection = 2131165368;
+			// aapt resource value: 0x7f0700ba
+			public const int sendEmailSection = 2131165370;
 			
 			// aapt resource value: 0x7f070074
 			public const int shortcut = 2131165300;
@@ -2822,8 +2828,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f070019
 			public const int tag_transition_group = 2131165209;
 			
-			// aapt resource value: 0x7f0700b2
-			public const int teamRecyclerView = 2131165362;
+			// aapt resource value: 0x7f0700b4
+			public const int teamRecyclerView = 2131165364;
 			
 			// aapt resource value: 0x7f07001a
 			public const int text = 2131165210;
@@ -2897,8 +2903,8 @@ namespace GiunecoTeam.Android
 			// aapt resource value: 0x7f07009e
 			public const int viewpager = 2131165342;
 			
-			// aapt resource value: 0x7f0700bc
-			public const int visible = 2131165372;
+			// aapt resource value: 0x7f0700be
+			public const int visible = 2131165374;
 			
 			// aapt resource value: 0x7f07003c
 			public const int withText = 2131165244;
@@ -3149,19 +3155,22 @@ namespace GiunecoTeam.Android
 			public const int select_dialog_singlechoice_material = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int support_simple_spinner_dropdown_item = 2130903102;
+			public const int Splash = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int TeamFragment = 2130903103;
+			public const int support_simple_spinner_dropdown_item = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int TeamItem = 2130903104;
+			public const int TeamFragment = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int TeamMemberDetail = 2130903105;
+			public const int TeamItem = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int tooltip = 2130903106;
+			public const int TeamMemberDetail = 2130903106;
+			
+			// aapt resource value: 0x7f030043
+			public const int tooltip = 2130903107;
 			
 			static Layout()
 			{
