@@ -7,6 +7,7 @@ using Android.Support.V4.App;
 using Android.Support.V7.Widget;
 using GiunecoTeam.Android.Adapter;
 using GiunecoTeam.Domain.Models;
+using GiunecoTeam.Domain.Resources;
 using GiunecoTeam.Domain.Resources.Impl;
 
 namespace GiunecoTeam.Android.Fragments
@@ -17,6 +18,7 @@ namespace GiunecoTeam.Android.Fragments
         private RecyclerView.LayoutManager _layoutManager;
         private TeamAdapter _teamAdapter;
         private IEnumerable<TeamMember> _team;
+        private ITeamResource _teamResource;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -24,6 +26,8 @@ namespace GiunecoTeam.Android.Fragments
             var view = inflater.Inflate(Resource.Layout.TeamFragment, container, false);
 
             this._teamRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.teamRecyclerView);
+
+            _teamResource = new TeamResource();
 
             this.GetTeam().ContinueWith(c => this._team = c.Result);
 
@@ -44,10 +48,8 @@ namespace GiunecoTeam.Android.Fragments
 
         private async Task<IEnumerable<TeamMember>> GetTeam()
         {
-            var teamResource = new TeamResource();
-
             var stream = this.Activity.Assets.Open("db.json");
-            return await teamResource.LocalGet(stream);
+            return await _teamResource.LocalGet(stream);
         }
 
     }

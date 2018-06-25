@@ -1,0 +1,210 @@
+{
+  "team": [
+    {
+      "id": 1,
+      "name": "Gabriele",
+      "surname": "Coppola",
+      "role": "Developer",
+      "bio": "Cane bastardo spregevole",
+      "email": "gabriele.coppola@giuneco.it",
+      "images": {
+        "imgpic": "https://www.dropbox.com/s/xlxteaarx4evvci/gcPic.png?raw=1",
+        "imgfull": "https://www.dropbox.com/s/s0bo29djv73bp1h/gcFull.png?raw=1"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Gerardo",
+      "surname": "Greco",
+      "role": "Developer",
+      "bio": "Ho scaricato BloodBorne! Ce l'ho li pronto per essere giocato...",
+      "email": "gerardo.greco@giuneco.it",
+      "images": {
+        "imgpic": "https://www.dropbox.com/s/vxkbeq7i5nurcta/ggPic.jpg?raw=1",
+        "imgfull": ""
+      }
+    },
+    {
+      "id": 3,
+      "name": "Marco",
+      "surname": "Milani",
+      "role": "Whipper",
+      "bio": "Ti rasero' l'aiolaaaaaaa, cristo!",
+      "email": "marco.milani@giuneco.it",
+      "images": {
+        "imgpic": "https://www.dropbox.com/s/n4a9925efgyrnac/marmPic.jpg?raw=1",
+        "imgfull": ""
+      }
+    },
+    {
+      "id": 4,
+      "name": "Stefano",
+      "surname": "Ronchini",
+      "role": "Developer",
+      "bio": "Godo come un bastardo!",
+      "email": "stefano.ronchini@giuneco.it",
+      "images": {
+        "imgpic": "https://www.dropbox.com/s/brapzu2m8obrvoh/srPic.jpg?raw=1",
+        "imgfull": ""
+      }
+    },
+    {
+      "id": 5,
+      "name": "Gabriele",
+      "surname": "Seroni",
+      "role": "Developer",
+      "bio": "I'Ssero risolve!",
+      "email": "gabriele.seroni@giuneco.it",
+      "images": {
+        "imgpic": "https://www.dropbox.com/s/9y5dcty49zx7l4c/gsPic.png?raw=1",
+        "imgfull": ""
+      }
+    },
+    {
+      "id": 6,
+      "name": "Andrea",
+      "surname": "Lorenzi",
+      "role": "Financial Controller",
+      "bio": "La condivisione dell'auto è una poverata (car to go). Sei bella come una RIBA",
+      "email": "andrea.lorenzi@giuneco.it",
+      "images": {
+        "imgpic": "https://www.dropbox.com/s/3uyfm703da4o7qa/alPic.png?raw=1",
+        "imgfull": ""
+      }
+    },
+    {
+      "id": 7,
+      "name": "Federico",
+      "surname": "Barsotti",
+      "role": "Chief Technical Officier",
+      "bio": "",
+      "email": "federico.barsotti@giuneco.it",
+      "images": {
+        "imgpic": "",
+        "imgfull": ""
+      }
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "La Marzocco",
+      "groupimage": "http://www.easyfairs.com/uploads/tx_ef/lamarzocco-official-logo.png",
+      "address": "Localit� la Torre, 14H, 50038 Scarperia FI",
+      "groupmembers": [
+        {
+          "id": 1,
+          "name": "Gabriele",
+          "surname": "Coppola",
+          "role": "Developer",
+          "bio": "Cane bastardo spregevole",
+          "email": "gabriele.coppola@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/xlxteaarx4evvci/gcPic.png?raw=1",
+            "imgfull": "https://www.dropbox.com/s/s0bo29djv73bp1h/gcFull.png?raw=1"
+          }
+        },
+        {
+          "id": 7,
+          "name": "Federico",
+          "surname": "Barsotti",
+          "role": "Chief Technical Officier",
+          "bio": "",
+          "email": "federico.barsotti@giuneco.it",
+          "images": {
+            "imgpic": "",
+            "imgfull": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "PowerSoft",
+      "groupimage": "http://surgesound.co.za/wp-content/uploads/2014/06/Powersoft_logo_blue.png",
+      "address": "Via Conti, 5, 50018 Scandicci FI",
+      "groupmembers": [
+        {
+          "id": 1,
+          "name": "Gabriele",
+          "surname": "Coppola",
+          "role": "Developer",
+          "bio": "Cane bastardo spregevole",
+          "email": "gabriele.coppola@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/xlxteaarx4evvci/gcPic.png?raw=1",
+            "imgfull": "https://www.dropbox.com/s/s0bo29djv73bp1h/gcFull.png?raw=1"
+          }
+        },
+        {
+          "id": 3,
+          "name": "Marco",
+          "surname": "Milani",
+          "role": "Whipper",
+          "bio": "Ti rasero' l'aiolaaaaaaa, cristo!",
+          "email": "marco.milani@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/n4a9925efgyrnac/marmPic.jpg?raw=1",
+            "imgfull": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Luisa Via Roma",
+      "groupimage": "http://fashionstealer.com/PICTURES/stores/luisaviaroma_logo.png",
+      "address": "Via Silvio Pellico, 9, 50121 Firenze FI",
+      "groupmembers": [
+        {
+          "id": 2,
+          "name": "Gerardo",
+          "surname": "Greco",
+          "role": "Developer",
+          "bio": "Ho scaricato BloodBorne! Ce l'ho li pronto per essere giocato...",
+          "email": "gerardo.greco@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/vxkbeq7i5nurcta/ggPic.jpg?raw=1",
+            "imgfull": ""
+          }
+        },
+        {
+          "id": 4,
+          "name": "Stefano",
+          "surname": "Ronchini",
+          "role": "Developer",
+          "bio": "Godo come un bastardo!",
+          "email": "stefano.ronchini@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/brapzu2m8obrvoh/srPic.jpg?raw=1",
+            "imgfull": ""
+          }
+        },
+        {
+          "id": 5,
+          "name": "Gabriele",
+          "surname": "Seroni",
+          "role": "Developer",
+          "bio": "I'Ssero risolve!",
+          "email": "gabriele.seroni@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/9y5dcty49zx7l4c/gsPic.png?raw=1",
+            "imgfull": ""
+          }
+        },
+        {
+          "id": 6,
+          "name": "Andrea",
+          "surname": "Lorenzi",
+          "role": "Financial Controller",
+          "bio": "Figa! Quanti giargiani!",
+          "email": "andrea.lorenzi@giuneco.it",
+          "images": {
+            "imgpic": "https://www.dropbox.com/s/3uyfm703da4o7qa/alPic.png?raw=1",
+            "imgfull": ""
+          }
+        }
+      ]
+    }
+  ] 
+}

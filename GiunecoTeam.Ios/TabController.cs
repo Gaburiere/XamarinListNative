@@ -21,13 +21,13 @@ namespace GiunecoTeam.Ios
         {
             this._team = new UIViewController
             {
-                View = {BackgroundColor = UIColor.Red},
+                View = {BackgroundColor = UIColor.FromRGB(175, 44, 43) },
                 Title = "Team"
             };
 
             this._group = new UIViewController()
             {
-                View = {BackgroundColor = UIColor.Magenta},
+                View = { BackgroundColor = UIColor.FromRGB(175, 44, 43) },
                 Title = "Groups"
             };
 

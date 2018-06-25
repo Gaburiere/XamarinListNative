@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiunecoTeam.Android", "Giun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiunecoTeam.Ios", "GiunecoTeam.Ios\GiunecoTeam.Ios.csproj", "{1FEEDAFC-AE41-493B-B735-5244275DA58F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{4E2EC0AF-F9FC-4F4F-8588-2D8B581B424C}"
+	ProjectSection(SolutionItems) = preProject
+		SolutionItems\db.json = SolutionItems\db.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

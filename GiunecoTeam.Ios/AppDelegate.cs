@@ -30,6 +30,8 @@ namespace GiunecoTeam.Ios
             // make the window visible
             Window.MakeKeyAndVisible();
 
+            UITabBar.Appearance.SelectedImageTintColor = UIColor.White;
+
             return true;
         }
 
@@ -65,5 +67,8 @@ namespace GiunecoTeam.Ios
         }
     }
 }
+
+
+
 
 
