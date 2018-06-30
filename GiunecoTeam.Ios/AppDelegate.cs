@@ -10,8 +10,6 @@ namespace GiunecoTeam.Ios
     {
         // class-level declarations
 
-        private TabController _tabController;
-
         public override UIWindow Window
         {
             get;
@@ -24,8 +22,6 @@ namespace GiunecoTeam.Ios
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
             // If you have defined a root view controller, set it here:
-            _tabController = new TabController();
-            Window.RootViewController = _tabController;
 
             // make the window visible
             Window.MakeKeyAndVisible();
