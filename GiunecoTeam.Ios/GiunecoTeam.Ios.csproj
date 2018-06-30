@@ -65,13 +65,28 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="TabController.cs" />
+    <Compile Include="TeamCollectionView.cs" />
+    <Compile Include="TeamCollectionView.designer.cs">
+      <DependentUpon>TeamCollectionView.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeamCollectionViewController.cs" />
+    <Compile Include="TeamCollectionViewController.designer.cs">
+      <DependentUpon>TeamCollectionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeamCollectionViewSource.cs" />
     <Compile Include="TeamMemberViewCell.cs" />
+    <Compile Include="TeamMemberViewCell.designer.cs">
+      <DependentUpon>TeamMemberViewCell.cs</DependentUpon>
+    </Compile>
     <None Include="GettingStarted.Xamarin" />
     <None Include="Info.plist" />
+    <Compile Include="MainController.cs" />
+    <Compile Include="MainController.designer.cs">
+      <DependentUpon>MainController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="main.storyboard" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
