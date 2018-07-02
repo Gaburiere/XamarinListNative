@@ -22,6 +22,8 @@ namespace GiunecoTeam.Ios2
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cell = (TeamMemberCell)tableView.DequeueReusableCell(ReuseId, indexPath);
+            
+
             var teamMember = this._team.ElementAt(indexPath.Row); // todo check outofindex?
 
 

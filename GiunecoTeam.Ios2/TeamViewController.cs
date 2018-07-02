@@ -20,10 +20,11 @@ namespace GiunecoTeam.Ios2
 
         public override async void ViewDidLoad()
         {
-            //TableView.RegisterClassForCellReuse(typeof(TeamMemberCell), "TeamMemberCell");
-
+            //TableView.RowHeight = UITableView.AutomaticDimension;
+            TableView.EstimatedRowHeight = new nfloat(500);
             _team = await this.GetTeam();
             this.TableView.Source = new TeamSource(_team, this);
+            this.TableView.ReloadData();
         }
 
         private async Task<IEnumerable<TeamMember>> GetTeam()

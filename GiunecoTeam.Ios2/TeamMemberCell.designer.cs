@@ -16,10 +16,19 @@ namespace GiunecoTeam.Ios2
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView Image { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel Name { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (Image != null) {
+                Image.Dispose ();
+                Image = null;
+            }
+
             if (Name != null) {
                 Name.Dispose ();
                 Name = null;
