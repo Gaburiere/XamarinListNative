@@ -11,18 +11,18 @@ using UIKit;
 
 namespace GiunecoTeam.Ios
 {
-    [Register ("TeamCollectionViewController")]
-    partial class TeamCollectionViewController
+    [Register ("TeamMemberCell")]
+    partial class TeamMemberCell
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        GiunecoTeam.Ios.TeamCollectionView Team { get; set; }
+        UIKit.UILabel Name { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (Team != null) {
-                Team.Dispose ();
-                Team = null;
+            if (Name != null) {
+                Name.Dispose ();
+                Name = null;
             }
         }
     }

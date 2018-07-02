@@ -9,10 +9,10 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace GiunecoTeam.Ios
+namespace GiunecoTeam.Ios2
 {
-    [Register ("TeamCollectionView")]
-    partial class TeamCollectionView
+    [Register ("TeamMemberCell")]
+    partial class TeamMemberCell
     {
         void ReleaseDesignerOutlets ()
         {

@@ -11,27 +11,18 @@ using UIKit;
 
 namespace GiunecoTeam.Ios
 {
-    [Register ("TeamMemberViewCell")]
-    partial class TeamMemberViewCell
+    [Register ("TeamViewController")]
+    partial class TeamViewController
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel FullName { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView Image { get; set; }
+        UIKit.UITableView TeamTable { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (FullName != null) {
-                FullName.Dispose ();
-                FullName = null;
-            }
-
-            if (Image != null) {
-                Image.Dispose ();
-                Image = null;
+            if (TeamTable != null) {
+                TeamTable.Dispose ();
+                TeamTable = null;
             }
         }
     }

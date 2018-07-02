@@ -18,14 +18,6 @@ namespace GiunecoTeam.Ios
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            // create a new window instance based on the screen size
-            Window = new UIWindow(UIScreen.MainScreen.Bounds);
-
-            // If you have defined a root view controller, set it here:
-
-            // make the window visible
-            Window.MakeKeyAndVisible();
-
             UITabBar.Appearance.SelectedImageTintColor = UIColor.White;
 
             return true;
