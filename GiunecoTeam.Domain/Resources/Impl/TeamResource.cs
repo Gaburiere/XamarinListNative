@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -13,13 +15,21 @@ namespace GiunecoTeam.Domain.Resources.Impl
     {
         public async Task<IEnumerable<TeamMember>> Get()
         {
-            using (var httpClient = new HttpClient())
+            try
             {
-                var uri = $"{CommonSetting.EndPoint}team";
-                var response = await httpClient.GetAsync(uri);
-                var stringContent = await response.Content.ReadAsStringAsync();
-                var data = JsonConvert.DeserializeObject<IEnumerable<TeamMember>>(stringContent);
-                return data;
+                using (var httpClient = new HttpClient())
+                {
+                    var uri = $"{CommonSetting.EndPoint}team";
+                    var response = await httpClient.GetAsync(uri);
+                    var stringContent = await response.Content.ReadAsStringAsync();
+                    var data = JsonConvert.DeserializeObject<IEnumerable<TeamMember>>(stringContent);
+                    return data;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                return null;
             }
         }
 

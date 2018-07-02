@@ -66,6 +66,7 @@
     <Compile Include="TeamMemberCell.designer.cs">
       <DependentUpon>TeamMemberCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeamSource.cs" />
     <Compile Include="TeamViewController.cs" />
     <Compile Include="TeamViewController.designer.cs">
       <DependentUpon>TeamViewController.cs</DependentUpon>
@@ -73,6 +74,7 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
@@ -131,8 +133,16 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\GiunecoTeam.Domain\GiunecoTeam.Domain.csproj">
+      <Project>{0CD66157-5A65-49D0-BD07-606CED3005FA}</Project>
+      <Name>GiunecoTeam.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />

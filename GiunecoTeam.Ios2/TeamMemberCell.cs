@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using System;
+using GiunecoTeam.Domain.Models;
 using UIKit;
 
 namespace GiunecoTeam.Ios2
@@ -8,6 +9,12 @@ namespace GiunecoTeam.Ios2
     {
         public TeamMemberCell (IntPtr handle) : base (handle)
         {
+            
+        }
+
+        public void UpdateCell(TeamMember teamMember)
+        {
+            this.Name.Text = teamMember.Fullname;
         }
     }
 }
