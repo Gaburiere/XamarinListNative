@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Android.App;
+using Android.Media;
 using Android.OS;
 using Android.Views.Animations;
 using Android.Widget;
@@ -15,6 +16,7 @@ namespace GiunecoTeam.Android
         private Animation _scaleUpAnimation;
         private ImageViewAsync _logoLauncher;
         private Button _btn;
+        private MediaPlayer _player;
 
 
         protected override async void OnCreate(Bundle savedInstanceState)
@@ -24,6 +26,8 @@ namespace GiunecoTeam.Android
             
             _logoLauncher = this.FindViewById<ImageViewAsync>(Resource.Id.logoLauncher);
             _btn = this.FindViewById<Button>(Resource.Id.btn);
+
+            _player = MediaPlayer.Create(this, null);
 
             _btn.Click += async (sender, e) =>
             {
@@ -42,11 +46,22 @@ namespace GiunecoTeam.Android
             };
 
             await ImageService.Instance.LoadCompiledResource("launcher.png")
-                .Success(async () => await this.Animate())
+                .Success(async () => await this.Splash())
                 .IntoAsync(_logoLauncher);
 
 
             //RunOnUiThread(() => StartActivity(typeof(MainActivity)));
+        }
+
+        private Task Splash()
+        {
+            var animateTask = Task.Run(async () => await Animate());
+            var soundTask = Task.Run(async () => await Sound());
+        }
+
+        private Task Sound()
+        {
+            
         }
 
         private async Task Animate()
