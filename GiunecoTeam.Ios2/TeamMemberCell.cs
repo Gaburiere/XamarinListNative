@@ -21,7 +21,8 @@ namespace GiunecoTeam.Ios2
                 .Transform(new CircleTransformation())
                 .DownSample(100, 100)
                 .ErrorPlaceholder("user.png", ImageSource.CompiledResource)
-                .LoadingPlaceholder("loading.png", ImageSource.CompiledResource).Into(this.Image);
+                .LoadingPlaceholder("loading.png", ImageSource.CompiledResource).Into(this.MemberImage);
         }
+
     }
 }

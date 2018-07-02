@@ -16,7 +16,7 @@ namespace GiunecoTeam.Ios2
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIImageView Image { get; set; }
+        UIKit.UIImageView MemberImage { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -24,9 +24,9 @@ namespace GiunecoTeam.Ios2
 
         void ReleaseDesignerOutlets ()
         {
-            if (Image != null) {
-                Image.Dispose ();
-                Image = null;
+            if (MemberImage != null) {
+                MemberImage.Dispose ();
+                MemberImage = null;
             }
 
             if (Name != null) {
