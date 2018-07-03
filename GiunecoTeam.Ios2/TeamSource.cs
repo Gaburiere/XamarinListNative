@@ -35,5 +35,17 @@ namespace GiunecoTeam.Ios2
         {
             return _team.Count();
         }
+
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            var teamMemberController = _controller.Storyboard.InstantiateViewController("TeamMemberDetail") as TeamMemberDetailController;
+            if (teamMemberController == null)
+                return;
+            var teamMember = _team.ElementAt(indexPath.Row);
+            teamMemberController.InitTeamMember(teamMember.Id);
+
+            //todo scoppia qui perché il navigation controller è null
+            _controller.NavigationController.PushViewController(teamMemberController, true);
+        }
     }
 }

@@ -33,6 +33,26 @@ namespace GiunecoTeam.Domain.Resources.Impl
             }
         }
 
+        public async Task<TeamMember> Get(int id)
+        {
+            try
+            {
+                using (var httpClient = new HttpClient())
+                {
+                    var uri = $"{CommonSetting.EndPoint}team/{id}";
+                    var response = await httpClient.GetAsync(uri);
+                    var stringContent = await response.Content.ReadAsStringAsync();
+                    var data = JsonConvert.DeserializeObject<TeamMember>(stringContent);
+                    return data;
+                }
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                return null;
+            }
+        }
+
         public async Task<IEnumerable<TeamMember>> LocalGet(Stream dbStream)
         {
             var sr = new StreamReader(dbStream);

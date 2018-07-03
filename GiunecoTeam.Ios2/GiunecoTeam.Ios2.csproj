@@ -66,6 +66,10 @@
     <Compile Include="TeamMemberCell.designer.cs">
       <DependentUpon>TeamMemberCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeamMemberDetailController.cs" />
+    <Compile Include="TeamMemberDetailController.designer.cs">
+      <DependentUpon>TeamMemberDetailController.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeamSource.cs" />
     <Compile Include="TeamViewController.cs" />
     <Compile Include="TeamViewController.designer.cs">
@@ -164,6 +168,7 @@
     <Content Include="Entitlements.plist" />
     <BundleResource Include="Resources\user.png" />
     <BundleResource Include="Resources\loading.png" />
+    <BundleResource Include="Resources\gcPic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
