@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V4.View;
@@ -34,6 +35,14 @@ namespace GiunecoTeam.Android
             this._viewPager.Adapter = this._viewPagerAdapter;
 
             this._tabLayout.SetupWithViewPager(this._viewPager);
+
+            this.ShowLogin();
+        }
+
+        private void ShowLogin()
+        {
+            var login = new Intent(this, typeof(LoginActivity));
+            this.StartActivity(login);
         }
 
         private void PopulateFragment()

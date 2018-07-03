@@ -19,6 +19,7 @@ namespace GiunecoTeam.Android.Fragments
         private RecyclerView _groupsRecyclerView;
         private RecyclerView.LayoutManager _layoutManager;
         private GroupsAdapter _groupsAdapter;
+        private GroupsResource _groupResource;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -26,8 +27,11 @@ namespace GiunecoTeam.Android.Fragments
             var view = inflater.Inflate(Resource.Layout.GroupFragment, container, false);
 
             this._groupsRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.groupsRecyclerView);
+            _groupResource = new GroupsResource();
 
             this._groups = this.GetGroups().GetAwaiter().GetResult();
+
+            //this.GetGroups().ContinueWith(c => _groups = c.Result);
             this._groupsAdapter = new GroupsAdapter(this._groups, this.Activity);
             this._groupsAdapter.ItemClick += (sender, position) =>
             {
@@ -52,9 +56,8 @@ namespace GiunecoTeam.Android.Fragments
 
         private async Task<IEnumerable<Group>> GetGroups()
         {
-            var groupResource = new GroupsResource();
             var stream = this.Activity.Assets.Open("db.json");
-            return await groupResource.LocalGet(stream);
+            return await _groupResource.LocalGet(stream);
         }
     }
 }
