@@ -43,29 +43,33 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" id="2375" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" image="user.png" ambiguous="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" horizontalHuggingPriority="251">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" id="2375" translatesAutoresizingMaskIntoConstraints="NO" image="user.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" horizontalHuggingPriority="251">
                                             <rect key="frame" x="10" y="11" width="100" height="100"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gabriele Coppola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2379" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" ambiguous="YES">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gabriele Coppola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2379" translatesAutoresizingMaskIntoConstraints="NO">
                                             <rect key="frame" x="161" y="10" width="233" height="99.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                             <nil key="highlightedColor"/>
+                                            <constraints>
+                                                <constraint id="3933" firstAttribute="width" constant="233"/>
+                                            </constraints>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint id="2376" firstItem="2375" firstAttribute="leading" secondItem="2374" secondAttribute="leading" constant="10"/>
-                                        <constraint id="2377" firstItem="2375" firstAttribute="top" secondItem="2374" secondAttribute="top" constant="10"/>
-                                        <constraint id="2378" firstItem="2374" firstAttribute="bottom" secondItem="2375" secondAttribute="bottom" constant="10"/>
-                                        <constraint id="2380" firstItem="2379" firstAttribute="leading" secondItem="2375" secondAttribute="trailing" constant="51"/>
-                                        <constraint id="2381" firstItem="2374" firstAttribute="bottom" secondItem="2379" secondAttribute="bottom" constant="10"/>
-                                        <constraint id="2382" firstItem="2379" firstAttribute="top" secondItem="2374" secondAttribute="top" constant="10"/>
-                                        <constraint id="3150" firstItem="2374" firstAttribute="trailing" secondItem="2379" secondAttribute="trailing" constant="20"/>
+                                        <constraint id="3927" firstItem="2375" firstAttribute="leading" secondItem="2374" secondAttribute="leading" constant="10"/>
+                                        <constraint id="3928" firstItem="2374" firstAttribute="bottom" secondItem="2375" secondAttribute="bottom" constant="8"/>
+                                        <constraint id="3931" firstItem="2374" firstAttribute="trailing" secondItem="2379" secondAttribute="trailing" constant="20"/>
+                                        <constraint id="3932" firstItem="2374" firstAttribute="bottom" secondItem="2379" secondAttribute="bottom" constant="10"/>
+                                        <constraint id="4712" firstItem="2379" firstAttribute="leading" secondItem="2375" secondAttribute="trailing" constant="51"/>
+                                        <constraint id="5488" firstItem="2375" firstAttribute="top" secondItem="2374" secondAttribute="top" constant="11"/>
+                                        <constraint id="5503" firstItem="2379" firstAttribute="top" secondItem="2374" secondAttribute="top" constant="10"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="Name" destination="2379" id="name-outlet-2379"/>
                                     <outlet property="MemberImage" destination="2375" id="name-outlet-2375"/>
+                                    <segue id="4455" destination="3672" kind="show"/>
                                 </connections>
                                 <color key="backgroundColor" colorSpace="calibratedRGB" red="0.68627450980392157" green="0.17254901960784314" blue="0.16862745098039217" alpha="1"/>
                             </tableViewCell>

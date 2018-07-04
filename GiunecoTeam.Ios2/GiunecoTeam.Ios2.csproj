@@ -168,7 +168,6 @@
     <Content Include="Entitlements.plist" />
     <BundleResource Include="Resources\user.png" />
     <BundleResource Include="Resources\loading.png" />
-    <BundleResource Include="Resources\gcPic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

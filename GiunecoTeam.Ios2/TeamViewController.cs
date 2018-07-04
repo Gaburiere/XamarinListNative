@@ -18,8 +18,10 @@ namespace GiunecoTeam.Ios2
 
         }
 
-        public override async void ViewDidLoad()
+        public async override void ViewDidLoad()
         {
+            base.ViewDidLoad();
+
             _team = await this.GetTeam();
             this.TableView.Source = new TeamSource(_team, this);
             TableView.RowHeight = UITableView.AutomaticDimension;

@@ -24,7 +24,7 @@ namespace GiunecoTeam.Ios2
             var cell = (TeamMemberCell)tableView.DequeueReusableCell(ReuseId, indexPath);
             
 
-            var teamMember = this._team.ElementAt(indexPath.Row); // todo check outofindex?
+            var teamMember = this._team.ElementAt(indexPath.Row);
 
 
             cell.UpdateCell(teamMember);
