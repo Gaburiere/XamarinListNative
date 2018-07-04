@@ -93,8 +93,60 @@
                     <view key="view" contentMode="scaleToFill" id="3673">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.6" green="0.13333333333333333" blue="0.69803921568627447" alpha="1"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.68627450980392157" green="0.17254901960784314" blue="0.16862745098039217" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9393" translatesAutoresizingMaskIntoConstraints="NO" image="user.png">
+                                <rect key="frame" x="53" y="26" width="300" height="300"/>
+                                <constraints>
+                                    <constraint id="10615" firstItem="9393" firstAttribute="height" constant="300"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9398" translatesAutoresizingMaskIntoConstraints="NO" text="Nome Cognome" misplaced="YES">
+                                <rect key="frame" x="53" y="334" width="300" height="21"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" id="11332" translatesAutoresizingMaskIntoConstraints="NO" alignment="center" spacing="5" misplaced="YES">
+                                <rect key="frame" x="53" y="374" width="263" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nome.cognomegiuneco.it" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10251" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                        <rect key="frame" x="0.0" y="22" width="194" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9450" translatesAutoresizingMaskIntoConstraints="NO" image="emailIcon.png" misplaced="YES">
+                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint id="11329" firstItem="9450" firstAttribute="width" constant="25"/>
+                                            <constraint id="11330" firstItem="9450" firstAttribute="height" constant="26"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="11337" firstItem="9450" firstAttribute="leading" secondItem="10251" secondAttribute="trailing" constant="5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="10611" firstItem="3673" firstAttribute="centerX" secondItem="9393" secondAttribute="centerX" constant="4"/>
+                            <constraint id="10612" firstItem="9393" firstAttribute="top" secondItem="3669" secondAttribute="bottom" constant="6"/>
+                            <constraint id="10613" firstItem="3673" firstAttribute="trailingMargin" secondItem="9393" secondAttribute="trailing" constant="41"/>
+                            <constraint id="10614" firstItem="9393" firstAttribute="leading" secondItem="3673" secondAttribute="leadingMargin" constant="33"/>
+                            <constraint id="11320" firstItem="9398" firstAttribute="top" secondItem="9393" secondAttribute="bottom" constant="8"/>
+                            <constraint id="11322" firstItem="9398" firstAttribute="leading" secondItem="3673" secondAttribute="leadingMargin" constant="33"/>
+                            <constraint id="11323" firstItem="3673" firstAttribute="trailingMargin" secondItem="9398" secondAttribute="trailing" constant="41"/>
+                            <constraint id="11338" firstItem="11332" firstAttribute="leading" secondItem="3673" secondAttribute="leadingMargin" constant="33"/>
+                            <constraint id="11339" firstItem="3673" firstAttribute="trailingMargin" secondItem="11332" secondAttribute="trailing" constant="78"/>
+                            <constraint id="11340" firstItem="11332" firstAttribute="top" secondItem="9398" secondAttribute="bottom" constant="19"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Image" destination="9393" id="name-outlet-9393"/>
+                        <outlet property="Name" destination="9398" id="name-outlet-9398"/>
+                        <outlet property="Email" destination="10251" id="name-outlet-10251"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3674" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,5 +172,6 @@
     </scenes>
     <resources>
         <image name="user.png" width="64" height="64"/>
+        <image name="emailIcon.png" width="64" height="64"/>
     </resources>
 </document>

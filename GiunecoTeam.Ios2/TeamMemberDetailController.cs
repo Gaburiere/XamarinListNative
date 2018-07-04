@@ -1,6 +1,8 @@
 ﻿using Foundation;
 using System;
 using System.Threading.Tasks;
+using FFImageLoading;
+using FFImageLoading.Work;
 using GiunecoTeam.Domain.Models;
 using GiunecoTeam.Domain.Resources;
 using GiunecoTeam.Domain.Resources.Impl;
@@ -20,7 +22,22 @@ namespace GiunecoTeam.Ios2
 
         public override async void ViewDidLoad()
         {
-            var teamMember = await this.GetTeamMember(_id);
+            var member = await this.GetTeamMember(_id);
+            SetTeamMember(member);
+
+        }
+
+        private void SetTeamMember(TeamMember member)
+        {
+            ImageService.Instance.LoadUrl(member.Images.ImgFull)
+                .ErrorPlaceholder("user.png", ImageSource.CompiledResource)
+                .LoadingPlaceholder("loading.png", ImageSource.CompiledResource)
+                .Into(this.Image);
+
+            this.Name.Text = member.Fullname;
+            //this.Role.Text = member.Role;
+            this.Email.Text = member.Email;
+            //this.Bio.Text = member.Bio;
         }
 
         private async Task<TeamMember> GetTeamMember(int id)

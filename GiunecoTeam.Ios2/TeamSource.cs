@@ -45,7 +45,6 @@ namespace GiunecoTeam.Ios2
             var teamMember = _team.ElementAt(indexPath.Row);
             teamMemberController.InitTeamMember(teamMember.Id);
 
-            //todo scoppia qui perché il navigation controller è null
             _controller.NavigationController.PushViewController(teamMemberController, true);
         }
 

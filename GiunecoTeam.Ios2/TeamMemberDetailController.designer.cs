@@ -14,8 +14,34 @@ namespace GiunecoTeam.Ios2
     [Register ("TeamMemberDetailController")]
     partial class TeamMemberDetailController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel Email { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView Image { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel Name { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (Email != null) {
+                Email.Dispose ();
+                Email = null;
+            }
+
+            if (Image != null) {
+                Image.Dispose ();
+                Image = null;
+            }
+
+            if (Name != null) {
+                Name.Dispose ();
+                Name = null;
+            }
         }
     }
 }
