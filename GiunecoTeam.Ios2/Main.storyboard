@@ -95,39 +95,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.68627450980392157" green="0.17254901960784314" blue="0.16862745098039217" alpha="1"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9393" translatesAutoresizingMaskIntoConstraints="NO" image="user.png">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9393" translatesAutoresizingMaskIntoConstraints="NO" image="user.png">
                                 <rect key="frame" x="53" y="26" width="300" height="300"/>
                                 <constraints>
                                     <constraint id="10615" firstItem="9393" firstAttribute="height" constant="300"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9398" translatesAutoresizingMaskIntoConstraints="NO" text="Nome Cognome" misplaced="YES">
-                                <rect key="frame" x="53" y="334" width="300" height="21"/>
+                                <rect key="frame" x="22" y="334" width="331" height="31"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10251" translatesAutoresizingMaskIntoConstraints="NO" text="nome.cognome~giuneco.it" misplaced="YES">
+                                <rect key="frame" x="22" y="424" width="277" height="30"/>
                                 <nil key="highlightedColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" id="11332" translatesAutoresizingMaskIntoConstraints="NO" alignment="center" spacing="5" misplaced="YES">
-                                <rect key="frame" x="53" y="374" width="263" height="64"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nome.cognomegiuneco.it" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10251" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                        <rect key="frame" x="0.0" y="22" width="194" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9450" translatesAutoresizingMaskIntoConstraints="NO" image="emailIcon.png" misplaced="YES">
-                                        <rect key="frame" x="199" y="0.0" width="64" height="64"/>
-                                        <constraints>
-                                            <constraint id="11329" firstItem="9450" firstAttribute="width" constant="25"/>
-                                            <constraint id="11330" firstItem="9450" firstAttribute="height" constant="26"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9450" translatesAutoresizingMaskIntoConstraints="NO" image="emailIcon.png" misplaced="YES">
+                                <rect key="frame" x="353" y="424" width="30" height="30"/>
                                 <constraints>
-                                    <constraint id="11337" firstItem="9450" firstAttribute="leading" secondItem="10251" secondAttribute="trailing" constant="5"/>
+                                    <constraint id="12296" firstItem="9450" firstAttribute="width" constant="30"/>
+                                    <constraint id="12297" firstItem="9450" firstAttribute="height" constant="30"/>
                                 </constraints>
-                            </stackView>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="12890" translatesAutoresizingMaskIntoConstraints="NO" text="Ruolo" misplaced="YES">
+                                <rect key="frame" x="22" y="385" width="331" height="31"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint id="10611" firstItem="3673" firstAttribute="centerX" secondItem="9393" secondAttribute="centerX" constant="4"/>
@@ -135,17 +133,30 @@
                             <constraint id="10613" firstItem="3673" firstAttribute="trailingMargin" secondItem="9393" secondAttribute="trailing" constant="41"/>
                             <constraint id="10614" firstItem="9393" firstAttribute="leading" secondItem="3673" secondAttribute="leadingMargin" constant="33"/>
                             <constraint id="11320" firstItem="9398" firstAttribute="top" secondItem="9393" secondAttribute="bottom" constant="8"/>
-                            <constraint id="11322" firstItem="9398" firstAttribute="leading" secondItem="3673" secondAttribute="leadingMargin" constant="33"/>
                             <constraint id="11323" firstItem="3673" firstAttribute="trailingMargin" secondItem="9398" secondAttribute="trailing" constant="41"/>
-                            <constraint id="11338" firstItem="11332" firstAttribute="leading" secondItem="3673" secondAttribute="leadingMargin" constant="33"/>
-                            <constraint id="11339" firstItem="3673" firstAttribute="trailingMargin" secondItem="11332" secondAttribute="trailing" constant="78"/>
-                            <constraint id="11340" firstItem="11332" firstAttribute="top" secondItem="9398" secondAttribute="bottom" constant="19"/>
+                            <constraint id="11956" firstItem="9450" firstAttribute="leading" secondItem="10251" secondAttribute="trailing" constant="54"/>
+                            <constraint id="11957" firstItem="9450" firstAttribute="leading" secondItem="10251" secondAttribute="trailing" constant="54"/>
+                            <constraint id="11959" firstItem="10251" firstAttribute="centerY" secondItem="9450" secondAttribute="centerY"/>
+                            <constraint id="11960" firstItem="9450" firstAttribute="bottom" secondItem="10251" secondAttribute="bottom"/>
+                            <constraint id="11961" firstItem="10251" firstAttribute="centerY" secondItem="9450" secondAttribute="centerY"/>
+                            <constraint id="11963" firstItem="10251" firstAttribute="height" secondItem="9450" secondAttribute="height"/>
+                            <constraint id="11964" firstItem="10251" firstAttribute="centerY" secondItem="9450" secondAttribute="centerY"/>
+                            <constraint id="11967" firstItem="10251" firstAttribute="leading" secondItem="3673" secondAttribute="leadingMargin"/>
+                            <constraint id="11968" firstItem="3673" firstAttribute="trailingMargin" secondItem="9450" secondAttribute="trailing" constant="13"/>
+                            <constraint id="12887" firstItem="10251" firstAttribute="leading" secondItem="9398" secondAttribute="leading"/>
+                            <constraint id="12891" firstItem="3673" firstAttribute="trailingMargin" secondItem="12890" secondAttribute="trailing" constant="41"/>
+                            <constraint id="12892" firstItem="12890" firstAttribute="top" secondItem="9398" secondAttribute="bottom" constant="20"/>
+                            <constraint id="12893" firstItem="9398" firstAttribute="leading" secondItem="12890" secondAttribute="leading"/>
+                            <constraint id="12896" firstItem="10251" firstAttribute="top" secondItem="12890" secondAttribute="bottom" constant="8"/>
+                            <constraint id="12897" firstItem="12890" firstAttribute="leading" secondItem="10251" secondAttribute="leading"/>
+                            <constraint id="12898" firstItem="9398" firstAttribute="leading" secondItem="10251" secondAttribute="leading"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="Image" destination="9393" id="name-outlet-9393"/>
                         <outlet property="Name" destination="9398" id="name-outlet-9398"/>
                         <outlet property="Email" destination="10251" id="name-outlet-10251"/>
+                        <outlet property="Role" destination="12890" id="name-outlet-12890"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3674" userLabel="First Responder" sceneMemberID="firstResponder"/>

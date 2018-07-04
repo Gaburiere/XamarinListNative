@@ -35,7 +35,7 @@ namespace GiunecoTeam.Ios2
                 .Into(this.Image);
 
             this.Name.Text = member.Fullname;
-            //this.Role.Text = member.Role;
+            this.Role.Text = member.Role;
             this.Email.Text = member.Email;
             //this.Bio.Text = member.Bio;
         }
