@@ -47,5 +47,10 @@ namespace GiunecoTeam.Ios2
             //todo scoppia qui perché il navigation controller è null
             _controller.NavigationController.PushViewController(teamMemberController, true);
         }
+
+        public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+        {
+            return new nfloat(100);
+        }
     }
 }

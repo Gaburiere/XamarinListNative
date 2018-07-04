@@ -19,7 +19,7 @@ namespace GiunecoTeam.Ios2
             this.Name.Text = teamMember.Fullname;
             ImageService.Instance.LoadUrl(teamMember.Images.ImgPic)
                 .Transform(new CircleTransformation())
-                .DownSample(100, 100)
+                //.DownSample(100, 100)
                 .ErrorPlaceholder("user.png", ImageSource.CompiledResource)
                 .LoadingPlaceholder("loading.png", ImageSource.CompiledResource).Into(this.MemberImage);
         }
