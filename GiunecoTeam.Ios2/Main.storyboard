@@ -107,7 +107,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10251" translatesAutoresizingMaskIntoConstraints="NO" text="nome.cognome~giuneco.it" misplaced="YES">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10251" translatesAutoresizingMaskIntoConstraints="NO" text="nome.cognome~giuneco.it" misplaced="YES">
                                 <rect key="frame" x="22" y="424" width="277" height="30"/>
                                 <nil key="highlightedColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -125,6 +125,18 @@
                                 <nil key="highlightedColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="13249" translatesAutoresizingMaskIntoConstraints="NO" text="Aforismi" textAlignment="center" misplaced="YES">
+                                <rect key="frame" x="22" y="474" width="365" height="30"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="13257" translatesAutoresizingMaskIntoConstraints="NO" text="bla sdeiud aksdmniue faeo9fia amwoia sokfoek askfwqe aokfe fekadf oek faoekfaoekf aoeklskfasefr" textAlignment="justified" misplaced="YES" numberOfLines="0.0">
+                                <rect key="frame" x="22" y="512" width="365" height="25"/>
+                                <nil key="highlightedColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                             </label>
                         </subviews>
                         <constraints>
@@ -150,6 +162,12 @@
                             <constraint id="12896" firstItem="10251" firstAttribute="top" secondItem="12890" secondAttribute="bottom" constant="8"/>
                             <constraint id="12897" firstItem="12890" firstAttribute="leading" secondItem="10251" secondAttribute="leading"/>
                             <constraint id="12898" firstItem="9398" firstAttribute="leading" secondItem="10251" secondAttribute="leading"/>
+                            <constraint id="13252" firstItem="13249" firstAttribute="top" secondItem="10251" secondAttribute="bottom" constant="22"/>
+                            <constraint id="13254" firstItem="3673" firstAttribute="trailingMargin" secondItem="13249" secondAttribute="trailing" constant="7"/>
+                            <constraint id="13256" firstItem="10251" firstAttribute="leading" secondItem="13249" secondAttribute="leading"/>
+                            <constraint id="13260" firstItem="13249" firstAttribute="leading" secondItem="13257" secondAttribute="leading"/>
+                            <constraint id="13261" firstItem="13257" firstAttribute="top" secondItem="13249" secondAttribute="bottom" constant="8"/>
+                            <constraint id="13262" firstItem="3673" firstAttribute="trailingMargin" secondItem="13257" secondAttribute="trailing" constant="7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -157,6 +175,7 @@
                         <outlet property="Name" destination="9398" id="name-outlet-9398"/>
                         <outlet property="Email" destination="10251" id="name-outlet-10251"/>
                         <outlet property="Role" destination="12890" id="name-outlet-12890"/>
+                        <outlet property="Bio" destination="13257" id="name-outlet-13257"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3674" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -16,6 +16,10 @@ namespace GiunecoTeam.Ios2
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel Bio { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel Email { get; set; }
 
         [Outlet]
@@ -32,6 +36,11 @@ namespace GiunecoTeam.Ios2
 
         void ReleaseDesignerOutlets ()
         {
+            if (Bio != null) {
+                Bio.Dispose ();
+                Bio = null;
+            }
+
             if (Email != null) {
                 Email.Dispose ();
                 Email = null;
