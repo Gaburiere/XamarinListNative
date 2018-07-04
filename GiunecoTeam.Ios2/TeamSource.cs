@@ -13,6 +13,7 @@ namespace GiunecoTeam.Ios2
         private readonly IEnumerable<TeamMember> _team;
         private readonly UIViewController _controller;
 
+
         public TeamSource(IEnumerable<TeamMember> team, UIViewController teamViewController)
         {
             _team = team;
