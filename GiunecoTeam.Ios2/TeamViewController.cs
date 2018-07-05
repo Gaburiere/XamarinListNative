@@ -18,7 +18,7 @@ namespace GiunecoTeam.Ios2
 
         }
 
-        public async override void ViewDidLoad()
+        public override async void ViewDidLoad()
         {
             base.ViewDidLoad();
 
