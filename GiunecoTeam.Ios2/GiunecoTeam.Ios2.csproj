@@ -60,6 +60,15 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="GroupSource.cs" />
+    <Compile Include="GroupsViewController.cs" />
+    <Compile Include="GroupsViewController.designer.cs">
+      <DependentUpon>GroupsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupViewCell.cs" />
+    <Compile Include="GroupViewCell.designer.cs">
+      <DependentUpon>GroupViewCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="TeamMemberCell.cs" />
