@@ -15,7 +15,7 @@ namespace GiunecoTeam.Ios2
         public TeamViewController (IntPtr handle) : base (handle)
         {
             _teamResource = new TeamResource();
-
+            this.Title = "Team";
         }
 
         public override async void ViewDidLoad()

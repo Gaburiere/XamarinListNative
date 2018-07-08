@@ -8,20 +8,18 @@ using UIKit;
 
 namespace GiunecoTeam.Ios2
 {
-    public partial class TeamMemberCell : UITableViewCell
+    public partial class GroupMemberViewCell : UICollectionViewCell
     {
-        public TeamMemberCell (IntPtr handle) : base (handle)
+        public GroupMemberViewCell (IntPtr handle) : base (handle)
         {
         }
 
         public void UpdateCell(TeamMember teamMember)
         {
-            this.Name.Text = teamMember.Fullname;
             ImageService.Instance.LoadUrl(teamMember.Images.ImgPic)
                 .Transform(new CircleTransformation())
                 .ErrorPlaceholder("user.png", ImageSource.CompiledResource)
-                .LoadingPlaceholder("loading.png", ImageSource.CompiledResource).Into(this.MemberImage);
+                .LoadingPlaceholder("loading.png", ImageSource.CompiledResource).Into(this.TeamMemberImage);
         }
-
     }
 }

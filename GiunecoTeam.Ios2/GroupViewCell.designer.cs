@@ -14,8 +14,25 @@ namespace GiunecoTeam.Ios2
     [Register ("GroupViewCell")]
     partial class GroupViewCell
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView GroupImage { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UICollectionView GroupsCollectionView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (GroupImage != null) {
+                GroupImage.Dispose ();
+                GroupImage = null;
+            }
+
+            if (GroupsCollectionView != null) {
+                GroupsCollectionView.Dispose ();
+                GroupsCollectionView = null;
+            }
         }
     }
 }

@@ -13,9 +13,10 @@ namespace GiunecoTeam.Ios2
         private readonly GroupsResource _groupsResource;
         private IEnumerable<Group> _groups;
 
-        public GroupsViewController (IntPtr handle, GroupsResource groupsResource) : base (handle)
+        public GroupsViewController (IntPtr handle) : base (handle)
         {
-            _groupsResource = groupsResource;
+            _groupsResource = new GroupsResource();
+            this.Title = "Groups";
         }
 
         public override async void ViewDidLoad()
@@ -23,6 +24,7 @@ namespace GiunecoTeam.Ios2
             base.ViewDidLoad();
 
             _groups = await this.GetGroups();
+
             this.TableView.Source = new GroupSource(_groups, this);
             TableView.ReloadData();
 

@@ -24,7 +24,7 @@ namespace GiunecoTeam.Ios2
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             var cell = (GroupViewCell)tableView.DequeueReusableCell(ReuseId, indexPath);
-
+            cell.Controller = _controller;
 
             var group = this._groups.ElementAt(indexPath.Row);
 
@@ -36,6 +36,11 @@ namespace GiunecoTeam.Ios2
         public override nint RowsInSection(UITableView tableview, nint section)
         {
             return _groups.Count();
+        }
+
+        public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+        {
+            return new nfloat(200);
         }
     }
 }
