@@ -40,13 +40,13 @@
       "scale": "2x",
       "size": "60x60",
       "idiom": "iphone",
-      "filename": "Icon120.png"
+      "filename": "appico@x2.png"
     },
     {
       "scale": "3x",
       "size": "60x60",
       "idiom": "iphone",
-      "filename": "Icon180.png"
+      "filename": "appico@x3.png"
     },
     {
       "scale": "1x",
