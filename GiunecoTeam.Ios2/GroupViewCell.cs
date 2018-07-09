@@ -1,9 +1,11 @@
 ﻿using Foundation;
 using System;
+using System.Net;
 using FFImageLoading;
 using FFImageLoading.Work;
 using GiunecoTeam.Domain.Models;
 using UIKit;
+
 
 namespace GiunecoTeam.Ios2
 {
@@ -19,12 +21,11 @@ namespace GiunecoTeam.Ios2
         private void OpenMap()
         {
             var url = $"http://maps.apple.com/?q={_address}";
-            //url = url.Replace(" ", "%20");
-            //url = url.Replace(",", "");
+            var jrURL = new NSUrl(new System.Uri(url).AbsoluteUri);
 
-            if (UIApplication.SharedApplication.CanOpenUrl(new NSUrl(url)))
+            if (UIApplication.SharedApplication.CanOpenUrl(jrURL))
             {
-                UIApplication.SharedApplication.OpenUrl(new NSUrl(url));
+                UIApplication.SharedApplication.OpenUrl(jrURL);
             }
             else
             {

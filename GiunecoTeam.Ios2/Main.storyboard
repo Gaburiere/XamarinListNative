@@ -193,7 +193,7 @@
                     <connections>
                         <segue id="8805" destination="618" kind="relationship" relationship="rootViewController"/>
                     </connections>
-                    <tabBarItem key="tabBarItem" title="Team" id="8895"/>
+                    <tabBarItem key="tabBarItem" title="Team" id="8895" image="teamIco.png"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8745" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,7 +207,7 @@
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <tabBarItem key="tabBarItem" title="Groups" id="13702"/>
+                    <tabBarItem key="tabBarItem" title="Groups" id="13702" image="groupIco.png"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue id="13802" destination="13708" kind="relationship" relationship="rootViewController"/>
@@ -232,12 +232,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="179.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="14196" translatesAutoresizingMaskIntoConstraints="NO" image="luisaviaroma_logo.png" semanticContentAttribute="forceRightToLeft" misplaced="YES">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="14196" translatesAutoresizingMaskIntoConstraints="NO" image="luisaviaroma_logo.png" semanticContentAttribute="forceRightToLeft" misplaced="YES">
                                             <rect key="frame" x="20" y="28" width="374" height="72"/>
                                         </imageView>
                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="16692" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                             <rect key="frame" x="87" y="108" width="240" height="72"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" colorSpace="calibratedRGB" red="0.68627450980392157" green="0.17647058823529413" blue="0.17254901960784314" alpha="1"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="16694">
                                                 <size key="itemSize" width="50" height="50"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -301,8 +301,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="user.png" width="64" height="64"/>
         <image name="emailIcon.png" width="64" height="64"/>
         <image name="luisaviaroma_logo.png" width="300" height="150"/>
+        <image name="user.png" width="150" height="151"/>
+        <image name="groupIco.png" width="25" height="24"/>
+        <image name="teamIco.png" width="24" height="24"/>
     </resources>
 </document>

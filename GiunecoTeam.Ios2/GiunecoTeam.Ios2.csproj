@@ -180,10 +180,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Entitlements.plist" />
-    <BundleResource Include="Resources\user.png" />
-    <BundleResource Include="Resources\loading.png" />
     <BundleResource Include="Resources\emailIcon.png" />
     <BundleResource Include="Resources\luisaviaroma_logo.png" />
+    <BundleResource Include="Resources\user%402x.png" />
+    <BundleResource Include="Resources\user%403x.png" />
+    <BundleResource Include="Resources\loading.png" />
+    <BundleResource Include="Resources\loading%402x.png" />
+    <BundleResource Include="Resources\loading%403x.png" />
+    <BundleResource Include="Resources\user.png" />
+    <BundleResource Include="Resources\splash.jpg" />
+    <BundleResource Include="Resources\splash%402x.jpg" />
+    <BundleResource Include="Resources\splash%403x.jpg" />
+    <BundleResource Include="Resources\groupIco%402x.png" />
+    <BundleResource Include="Resources\groupIco%403x.png" />
+    <BundleResource Include="Resources\teamIco.png" />
+    <BundleResource Include="Resources\teamIco%402x.png" />
+    <BundleResource Include="Resources\teamIco%403x.png" />
+    <BundleResource Include="Resources\groupIco.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
