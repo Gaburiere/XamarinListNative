@@ -16,7 +16,7 @@ namespace GiunecoTeam.Domain.Resources.Impl
         {
             using (var httpClient = new HttpClient())
             {
-                var uri = $"{CommonSetting.EndPoint}token";
+                var uri = $"{CommonSetting.EndPointToken}";
                 var dictionary = new List<KeyValuePair<string, string>>
                 {
                     new KeyValuePair<string, string>("username", username),

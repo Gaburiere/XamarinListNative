@@ -19,7 +19,7 @@ namespace GiunecoTeam.Android.Fragments
         private RecyclerView _groupsRecyclerView;
         private RecyclerView.LayoutManager _layoutManager;
         private GroupsAdapter _groupsAdapter;
-        private GroupsResource _groupResource;
+        private GroupsResource _groupsResource;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -27,11 +27,37 @@ namespace GiunecoTeam.Android.Fragments
             var view = inflater.Inflate(Resource.Layout.GroupFragment, container, false);
 
             this._groupsRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.groupsRecyclerView);
-            _groupResource = new GroupsResource();
+            _groupsResource = new GroupsResource();
 
-            this._groups = this.GetGroups().GetAwaiter().GetResult();
+            //this.GetGroups().ContinueWith(c => this._groups = c.Result);
 
-            //this.GetGroups().ContinueWith(c => _groups = c.Result);
+            //this._groupsAdapter = new GroupsAdapter(this._groups, this.Activity);
+            //this._groupsAdapter.ItemClick += (sender, position) =>
+            //{
+            //    var groupAddress = this._groups.ElementAt(position).Address;
+            //    var groupName = this._groups.ElementAt(position).Name;
+
+            //    var geoUri = Uri.Parse($"geo:0,0?q={groupName}+{groupAddress}");
+
+
+            //    var mapIntent = new Intent(Intent.ActionView, geoUri);
+            //    this.StartActivity(Intent.CreateChooser(mapIntent,
+            //        "Apri indirizzo con: "));
+            //};
+
+            ////Groups
+            //this._groupsRecyclerView.SetAdapter(this._groupsAdapter);
+            //this._layoutManager = new LinearLayoutManager(this.Activity);
+            //this._groupsRecyclerView.SetLayoutManager(_layoutManager);
+
+            return view;
+        }
+
+        public override async void OnActivityCreated(Bundle savedInstanceState)
+        {
+            base.OnActivityCreated(savedInstanceState);
+            _groups = await this.GetGroups();
+
             this._groupsAdapter = new GroupsAdapter(this._groups, this.Activity);
             this._groupsAdapter.ItemClick += (sender, position) =>
             {
@@ -51,13 +77,11 @@ namespace GiunecoTeam.Android.Fragments
             this._layoutManager = new LinearLayoutManager(this.Activity);
             this._groupsRecyclerView.SetLayoutManager(_layoutManager);
 
-            return view;
         }
 
         private async Task<IEnumerable<Group>> GetGroups()
         {
-            var stream = this.Activity.Assets.Open("db.json");
-            return await _groupResource.LocalGet(stream);
+            return await _groupsResource.Get();
         }
     }
 }

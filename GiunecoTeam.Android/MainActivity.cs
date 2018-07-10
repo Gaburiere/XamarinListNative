@@ -36,7 +36,16 @@ namespace GiunecoTeam.Android
 
             this._tabLayout.SetupWithViewPager(this._viewPager);
 
+            this.SetIcons();
             this.ShowLogin();
+        }
+
+        private void SetIcons()
+        {
+            _tabLayout.GetTabAt(0).SetIcon(Resource.Drawable.teamIco);
+            _tabLayout.GetTabAt(1).SetIcon(Resource.Drawable.groupIco);
+
+            
         }
 
         private void ShowLogin()

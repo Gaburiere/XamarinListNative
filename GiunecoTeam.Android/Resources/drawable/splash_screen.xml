@@ -4,9 +4,9 @@
     <color android:color="@color/giunecoRed"/>
   </item>
   <item 
-    android:gravity="center">
+    android:gravity="fill">
     <bitmap
-      android:src="@drawable/launcher"
+      android:src="@drawable/splash"
     />
   </item>
 </layer-list>
