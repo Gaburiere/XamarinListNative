@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController" customClass="RootViewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="687" width="414" height="49"/>
@@ -23,7 +23,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-982" y="-182"/>
+            <point key="canvasLocation" x="-796" y="-181"/>
         </scene>
         <scene sceneID="617">
             <objects>
@@ -298,6 +298,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13714" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="525" y="593"/>
+        </scene>
+        <scene sceneID="19099">
+            <objects>
+                <viewController id="19100" sceneMemberID="viewController" customClass="LoginViewController" storyboardIdentifier="Login">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="19097"/>
+                        <viewControllerLayoutGuide type="bottom" id="19098"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="19101">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0.68627450980392157" green="0.17254901960784314" blue="0.16862745098039217" alpha="1"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please login with your credential" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="19108" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" numberOfLines="0.0">
+                                <rect key="frame" x="12" y="242" width="382" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="tintColor" colorSpace="calibratedRGB" red="0.0392156862745098" green="0.37647058823529411" blue="1" alpha="1"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="19116" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" placeholder="Username">
+                                <rect key="frame" x="20" y="312" width="366" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="19120" translatesAutoresizingMaskIntoConstraints="NO" placeholder="Password" misplaced="YES">
+                                <rect key="frame" x="20" y="362" width="366" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="19124" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="20" y="414" width="366" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="19111" firstItem="19108" firstAttribute="top" secondItem="19097" secondAttribute="bottom" constant="222"/>
+                            <constraint id="19114" firstItem="19108" firstAttribute="trailing" secondItem="19101" secondAttribute="trailingMargin"/>
+                            <constraint id="19115" firstItem="19101" firstAttribute="leadingMargin" secondItem="19108" secondAttribute="leading" constant="8"/>
+                            <constraint id="19117" firstItem="19101" firstAttribute="trailingMargin" secondItem="19116" secondAttribute="trailing" constant="8"/>
+                            <constraint id="19118" firstItem="19116" firstAttribute="leading" secondItem="19101" secondAttribute="leadingMargin"/>
+                            <constraint id="19119" firstItem="19116" firstAttribute="top" secondItem="19108" secondAttribute="bottom" constant="41"/>
+                            <constraint id="19121" firstItem="19120" firstAttribute="top" secondItem="19116" secondAttribute="bottom" constant="20"/>
+                            <constraint id="19122" firstItem="19101" firstAttribute="trailingMargin" secondItem="19120" secondAttribute="trailing" constant="8"/>
+                            <constraint id="19123" firstItem="19120" firstAttribute="leading" secondItem="19101" secondAttribute="leadingMargin"/>
+                            <constraint id="19125" firstItem="19124" firstAttribute="leading" secondItem="19101" secondAttribute="leadingMargin"/>
+                            <constraint id="19126" firstItem="19101" firstAttribute="trailingMargin" secondItem="19124" secondAttribute="trailing" constant="8"/>
+                            <constraint id="19127" firstItem="19124" firstAttribute="top" secondItem="19120" secondAttribute="bottom" constant="22"/>
+                        </constraints>
+                        <color key="tintColor" colorSpace="calibratedRGB" red="0.0392156862745098" green="0.37647058823529411" blue="1" alpha="1"/>
+                    </view>
+                    <connections>
+                        <outlet property="Username" destination="19116" id="name-outlet-19116"/>
+                        <outlet property="Password" destination="19120" id="name-outlet-19120"/>
+                        <outlet property="LoginButton" destination="19124" id="name-outlet-19124"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="19102" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794" y="632"/>
         </scene>
     </scenes>
     <resources>
