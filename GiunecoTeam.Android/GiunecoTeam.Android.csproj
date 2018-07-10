@@ -169,7 +169,11 @@
     </AndroidResource>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\tab_icon_color.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GiunecoTeam.Domain\GiunecoTeam.Domain.csproj">
       <Project>{0cd66157-5a65-49d0-bd07-606ced3005fa}</Project>

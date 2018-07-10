@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Android.App;
-using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using GiunecoTeam.Domain;
 using GiunecoTeam.Domain.Resources;
@@ -53,7 +47,7 @@ namespace GiunecoTeam.Android
             }
             catch (Exception e)
             {
-                Toast.MakeText(this, e.Message, ToastLength.Short);
+                Toast.MakeText(this, e.Message, ToastLength.Short).Show();
             }
         }
     }

@@ -1,8 +1,9 @@
 ﻿using Android.App;
 using Android.Content;
-using Android.Database;
+using Android.Content.Res;
 using Android.OS;
 using Android.Support.Design.Widget;
+using Android.Support.V4.Graphics.Drawable;
 using Android.Support.V4.View;
 using Android.Support.V7.App;
 using GiunecoTeam.Android.Adapter;
@@ -48,8 +49,22 @@ namespace GiunecoTeam.Android
 
         private void SetIcons()
         {
-            _tabLayout.GetTabAt(0).SetIcon(Resource.Drawable.teamIco);
-            _tabLayout.GetTabAt(1).SetIcon(Resource.Drawable.groupIco);
+            //var states = new int[][]
+            //{
+            //    new int[] {Android.Resource.Attribute.state}, // tab focused
+            //    new int[] {Android.Resource.Attribute.StateEnabled} // tab unfocused
+            //};
+            var tabIconColorsId = Resource.Drawable.tab_icon_color;
+            var tabIconColors = Resources.GetColorStateList(tabIconColorsId);
+
+            var teamTab = _tabLayout.GetTabAt(0).SetIcon(Resource.Drawable.teamIco);
+
+            var teamIconWrap = DrawableCompat.Wrap(teamTab.Icon);
+            DrawableCompat.SetTintList(teamIconWrap, tabIconColors);
+
+            var groupTab = _tabLayout.GetTabAt(1).SetIcon(Resource.Drawable.groupIco);
+            var groupIconWrap = DrawableCompat.Wrap(groupTab.Icon);
+            DrawableCompat.SetTintList(groupIconWrap, tabIconColors);
         }
 
         private void ShowLogin()
