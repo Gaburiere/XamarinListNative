@@ -48,8 +48,8 @@ namespace GiunecoTeam.Android
 
                 var token = await _userResource.Login(username, password);
                 CommonSetting.Token = token;
+                this.SetResult(Result.Ok);
                 this.Finish();
-
             }
             catch (Exception e)
             {

@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Database;
 using Android.OS;
 using Android.Support.Design.Widget;
 using Android.Support.V4.View;
@@ -28,6 +29,12 @@ namespace GiunecoTeam.Android
 
             // init adapter
             this._viewPagerAdapter = new ViewPagerAdapter(this.SupportFragmentManager);
+
+            this.ShowLogin();
+        }
+
+        private void InitTabLayoutAndFragment()
+        {
             // add fragments in the adapter
             this.PopulateFragment();
 
@@ -37,21 +44,18 @@ namespace GiunecoTeam.Android
             this._tabLayout.SetupWithViewPager(this._viewPager);
 
             this.SetIcons();
-            this.ShowLogin();
         }
 
         private void SetIcons()
         {
             _tabLayout.GetTabAt(0).SetIcon(Resource.Drawable.teamIco);
             _tabLayout.GetTabAt(1).SetIcon(Resource.Drawable.groupIco);
-
-            
         }
 
         private void ShowLogin()
         {
             var login = new Intent(this, typeof(LoginActivity));
-            this.StartActivity(login);
+            this.StartActivityForResult(login, 666);
         }
 
         private void PopulateFragment()
@@ -62,6 +66,19 @@ namespace GiunecoTeam.Android
             this._viewPagerAdapter.AddFragmentWithTitle(teamFragment, "Team");
             this._viewPagerAdapter.AddFragmentWithTitle(groupFragment, "Groups");
 
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            if (requestCode == 666)
+            {
+                if (resultCode == Result.Ok)
+                {
+                    this.InitTabLayoutAndFragment();
+                }
+            }
+
+            base.OnActivityResult(requestCode, resultCode, data);
         }
     }
 }
