@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GiunecoTeam.Domain", "Giune
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiunecoTeam.Android", "GiunecoTeam.Android\GiunecoTeam.Android.csproj", "{F76F6482-FAB2-4409-B2E8-6081E3FC9B64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiunecoTeam.Ios", "GiunecoTeam.Ios\GiunecoTeam.Ios.csproj", "{1FEEDAFC-AE41-493B-B735-5244275DA58F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{4E2EC0AF-F9FC-4F4F-8588-2D8B581B424C}"
 	ProjectSection(SolutionItems) = preProject
 		SolutionItems\db.json = SolutionItems\db.json
@@ -56,16 +54,6 @@ Global
 		{F76F6482-FAB2-4409-B2E8-6081E3FC9B64}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{F76F6482-FAB2-4409-B2E8-6081E3FC9B64}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{F76F6482-FAB2-4409-B2E8-6081E3FC9B64}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
-		{1FEEDAFC-AE41-493B-B735-5244275DA58F}.Debug|Any CPU.ActiveCfg = Debug|iPhone
-		{1FEEDAFC-AE41-493B-B735-5244275DA58F}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{1FEEDAFC-AE41-493B-B735-5244275DA58F}.Debug|iPhone.Build.0 = Debug|iPhone
-		{1FEEDAFC-AE41-493B-B735-5244275DA58F}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{1FEEDAFC-AE41-493B-B735-5244275DA58F}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{1FEEDAFC-AE41-493B-B735-5244275DA58F}.Release|Any CPU.ActiveCfg = Release|iPhone
-		{1FEEDAFC-AE41-493B-B735-5244275DA58F}.Release|iPhone.ActiveCfg = Release|iPhone
-		{1FEEDAFC-AE41-493B-B735-5244275DA58F}.Release|iPhone.Build.0 = Release|iPhone
-		{1FEEDAFC-AE41-493B-B735-5244275DA58F}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{1FEEDAFC-AE41-493B-B735-5244275DA58F}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{6125367E-0465-4915-907A-47860404577D}.Debug|Any CPU.ActiveCfg = Debug|iPhone
 		{6125367E-0465-4915-907A-47860404577D}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{6125367E-0465-4915-907A-47860404577D}.Debug|iPhone.Build.0 = Debug|iPhone

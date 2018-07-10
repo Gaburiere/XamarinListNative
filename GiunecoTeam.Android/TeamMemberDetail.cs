@@ -78,9 +78,11 @@ namespace GiunecoTeam.Android
         {
             try
             {
-                //todo mettere membro dbstream sulla main activity in modo che se la carichi una volta sola
-                var stream = this.Assets.Open("db.json");
-                var member = await this._teamResource.LocalGet(stream, id);
+                //var stream = this.Assets.Open("db.json");
+                //var member = await this._teamResource.LocalGet(stream, id);
+
+                var member = await this._teamResource.Get(id);
+
 
                 this._name.Text = member.Fullname;
                 this._role.Text = member.Role;

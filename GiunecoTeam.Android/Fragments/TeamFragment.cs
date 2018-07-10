@@ -20,6 +20,12 @@ namespace GiunecoTeam.Android.Fragments
         private IEnumerable<TeamMember> _team;
         private ITeamResource _teamResource;
 
+
+        public override async void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+        }
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
@@ -29,8 +35,27 @@ namespace GiunecoTeam.Android.Fragments
 
             _teamResource = new TeamResource();
 
-            this.GetTeam().ContinueWith(c => this._team = c.Result);
+            //this.GetTeam().ContinueWith(c => this._team = c.Result);
 
+            //this._teamAdapter = new TeamAdapter(this.Activity, this._team);
+            //this._teamAdapter.ItemClick += (sender, position) =>
+            //{
+            //    var intent = new Intent(this.Activity, typeof(TeamMemberDetail));
+            //    intent.PutExtra("id", position + 1);
+            //    this.Activity.StartActivity(intent);
+            //};
+
+            //this._teamRecyclerView.SetAdapter(this._teamAdapter);
+            //this._layoutManager = new LinearLayoutManager(this.Activity);
+            //this._teamRecyclerView.SetLayoutManager(_layoutManager);
+
+            return view;
+        }
+
+        public override async void OnActivityCreated(Bundle savedInstanceState)
+        {
+            base.OnActivityCreated(savedInstanceState);
+            _team = await this.GetTeam();
             this._teamAdapter = new TeamAdapter(this.Activity, this._team);
             this._teamAdapter.ItemClick += (sender, position) =>
             {
@@ -43,13 +68,13 @@ namespace GiunecoTeam.Android.Fragments
             this._layoutManager = new LinearLayoutManager(this.Activity);
             this._teamRecyclerView.SetLayoutManager(_layoutManager);
 
-            return view;
         }
 
         private async Task<IEnumerable<TeamMember>> GetTeam()
         {
-            var stream = this.Activity.Assets.Open("db.json");
-            return await _teamResource.LocalGet(stream);
+            //var stream = this.Activity.Assets.Open("db.json");
+            //return await _teamResource.LocalGet(stream);
+            return await _teamResource.Get();
         }
 
     }

@@ -34,6 +34,14 @@ namespace GiunecoTeam.Android
             this._viewPager.Adapter = this._viewPagerAdapter;
 
             this._tabLayout.SetupWithViewPager(this._viewPager);
+
+            this.SetIcons();
+        }
+
+        private void SetIcons()
+        {
+            _tabLayout.GetTabAt(0).SetIcon(Resource.Drawable.teamIco);
+            _tabLayout.GetTabAt(1).SetIcon(Resource.Drawable.groupIco);
         }
 
         private void PopulateFragment()
