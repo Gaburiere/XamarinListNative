@@ -9,21 +9,25 @@ namespace GiunecoTeam.Ios2
 {
     public partial class RootViewController : UITabBarController
     {
-        private IUserResource _userResource;
-
         public RootViewController (IntPtr handle) : base (handle)
         {
-            _userResource = new UserResource();
         }
 
         public override void ViewDidAppear(bool animated)
         {
-            var loginViewController = this.Storyboard.InstantiateViewController("Login") as LoginViewController;
-            if (loginViewController == null)
-                return;
+            //if (string.IsNullOrEmpty(CommonSetting.Token))
+            //{
+            //    var loginViewController = this.Storyboard.InstantiateViewController("Login") as LoginViewController;
+            //    if (loginViewController == null)
+            //        return;
+            //    PresentViewController(loginViewController, true, null);
+            //}
+            //else
+            //{
 
-            this.PresentModalViewController(loginViewController, true);
-            base.ViewDidAppear(animated);
+            //}
+
+            //base.ViewDidAppear(animated);
         }
     }
 }
