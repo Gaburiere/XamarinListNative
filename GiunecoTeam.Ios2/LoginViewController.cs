@@ -37,8 +37,8 @@ namespace GiunecoTeam.Ios2
                 var username = this.Username.Text;
                 var password = this.Password.Text;
 
-                //var token = await _userResource.Login(username, password);
-                //CommonSetting.Token = token;
+                var token = await _userResource.Login(username, password);
+                CommonSetting.Token = token;
 
                 OnLoginSuccess?.Invoke(this, null);
                 //this.DismissViewController(true, null);
