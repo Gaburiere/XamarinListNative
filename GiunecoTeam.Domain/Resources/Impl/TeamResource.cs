@@ -20,6 +20,7 @@ namespace GiunecoTeam.Domain.Resources.Impl
                 using (var httpClient = new HttpClient())
                 {
                     var uri = $"{CommonSetting.EndPoint}team";
+                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {CommonSetting.Token}");
                     var response = await httpClient.GetAsync(uri);
                     var stringContent = await response.Content.ReadAsStringAsync();
                     var data = JsonConvert.DeserializeObject<IEnumerable<TeamMember>>(stringContent);
@@ -40,6 +41,7 @@ namespace GiunecoTeam.Domain.Resources.Impl
                 using (var httpClient = new HttpClient())
                 {
                     var uri = $"{CommonSetting.EndPoint}team/{id}";
+                    httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {CommonSetting.Token}");
                     var response = await httpClient.GetAsync(uri);
                     var stringContent = await response.Content.ReadAsStringAsync();
                     var data = JsonConvert.DeserializeObject<TeamMember>(stringContent);

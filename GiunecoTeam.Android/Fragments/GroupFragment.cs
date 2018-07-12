@@ -27,7 +27,6 @@ namespace GiunecoTeam.Android.Fragments
             var view = inflater.Inflate(Resource.Layout.GroupFragment, container, false);
 
             this._groupsRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.groupsRecyclerView);
-
             _groupsResource = new GroupsResource();
 
             //this.GetGroups().ContinueWith(c => this._groups = c.Result);

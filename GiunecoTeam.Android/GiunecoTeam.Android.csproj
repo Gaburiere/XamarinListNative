@@ -129,6 +129,7 @@
     <Compile Include="Adapter\ViewPagerAdapter.cs" />
     <Compile Include="Fragments\GroupFragment.cs" />
     <Compile Include="Fragments\TeamFragment.cs" />
+    <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -168,7 +169,11 @@
     </AndroidResource>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\tab_icon_color.xml">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GiunecoTeam.Domain\GiunecoTeam.Domain.csproj">
       <Project>{0cd66157-5a65-49d0-bd07-606ced3005fa}</Project>
@@ -287,6 +292,11 @@
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-xxxhdpi\app_ico.png">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Login.axml">
+      <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

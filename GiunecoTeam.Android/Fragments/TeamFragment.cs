@@ -32,7 +32,6 @@ namespace GiunecoTeam.Android.Fragments
             var view = inflater.Inflate(Resource.Layout.TeamFragment, container, false);
 
             this._teamRecyclerView = view.FindViewById<RecyclerView>(Resource.Id.teamRecyclerView);
-
             _teamResource = new TeamResource();
 
             //this.GetTeam().ContinueWith(c => this._team = c.Result);
@@ -67,7 +66,6 @@ namespace GiunecoTeam.Android.Fragments
             this._teamRecyclerView.SetAdapter(this._teamAdapter);
             this._layoutManager = new LinearLayoutManager(this.Activity);
             this._teamRecyclerView.SetLayoutManager(_layoutManager);
-
         }
 
         private async Task<IEnumerable<TeamMember>> GetTeam()
